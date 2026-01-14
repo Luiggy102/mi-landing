@@ -1,17 +1,21 @@
 .about-section {
   position: relative;
-  /* width: 100vw; */
+  width: 100%; /* Cambiado de 100vw a 100% para evitar desbordamiento */
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 0px 20px; /* Espacio para la navbar */
+  padding: 100px 20px; /* Padding suficiente para la navbar */
+  background-color: #0a0a0a; /* Fallback por si las partículas tardan en cargar */
+  box-sizing: border-box;
 }
 
-/* El componente de partículas debe estar al fondo */
+/* Partículas fijas al fondo */
 ngx-particles {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -19,26 +23,33 @@ ngx-particles {
 
 .content-wrapper {
   position: relative;
-  z-index: 2; /* Por encima de las partículas */
+  z-index: 2;
   display: flex;
+  flex-direction: row; /* Desktop por defecto */
   align-items: center;
-  gap: 4rem;
+  gap: 3rem;
   max-width: 1100px;
-  width: 100%;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.05); /* Efecto cristal muy sutil */
-  backdrop-filter: blur(5px);
-  border-radius: 30px;
+  width: 95%; /* Ajuste para no pegar a los bordes */
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.photo-container {
+  flex-shrink: 0; /* Evita que la foto se encoja */
 }
 
 .photo-frame {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid #00d2ff;
-  box-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+  border: 3px solid #00d2ff;
+  box-shadow: 0 0 30px rgba(0, 210, 255, 0.3);
 }
 
 .photo-frame img {
@@ -50,11 +61,15 @@ ngx-particles {
 .info-container {
   flex: 1;
   color: white;
+  text-align: left;
 }
 
 .title {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  font-size: clamp(1.8rem, 5vw, 2.8rem); /* Tamaño fluido */
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  line-height: 1.2;
   background: linear-gradient(90deg, #fff, #00d2ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -62,38 +77,42 @@ ngx-particles {
 
 .description {
   font-size: 1.1rem;
-  line-height: 1.8;
+  line-height: 1.7;
   margin-bottom: 2rem;
-  color: #e0e0e0;
+  color: #ccc;
 }
 
 .social-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
 .social-icon {
   color: white;
-  transition: transform 0.3s, color 0.3s;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
+  opacity: 0.8;
 }
 
 .social-icon:hover {
   color: #00d2ff;
-  transform: translateY(-5px);
+  transform: translateY(-3px);
+  opacity: 1;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-
-.about-section {
-  padding: 80px 20px;
-}
+/* --- RESPONSIVO PARA MÓVILES --- */
+@media (max-width: 850px) {
   .content-wrapper {
-    flex-direction: column;
+    flex-direction: column; /* Apila foto arriba y texto abajo */
     text-align: center;
+    padding: 2rem;
     gap: 2rem;
+    margin-top: 20px;
+  }
+
+  .info-container {
+    text-align: center;
   }
 
   .photo-frame {
@@ -103,5 +122,9 @@ ngx-particles {
 
   .social-links {
     justify-content: center;
+  }
+
+  .title {
+    margin-bottom: 1.5rem;
   }
 }

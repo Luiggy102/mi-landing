@@ -1,0 +1,36 @@
+<!-- <om-flickering-grid [squareSize]="6" [color]="'#fff'" styleClass="grid-eventos"> -->
+<section id="eventos" class="eventos-section">
+     <h2 class="section-title">Eventos y Comunidad</h2>
+
+     <div class="marquee-wrapper">
+          <om-marquee>
+               @for (evento of eventos; track $index) {
+               <ng-template [omMarqueeItem]="evento">
+                    <div class="event-card">
+                         <img [src]="evento.pathImagen" [alt]="evento.nombreEvento">
+                         <div class="event-overlay">
+                              <span>{{ evento.nombreEvento }}</span>
+                         </div>
+                    </div>
+               </ng-template>
+               }
+          </om-marquee>
+
+          <om-marquee [reverse]="true">
+               @for (evento of eventosFila2; track $index) {
+               <ng-template [omMarqueeItem]="evento">
+                    <div class="event-card">
+                         <img [src]="evento.pathImagen" [alt]="evento.nombreEvento">
+                         <div class="event-overlay">
+                              <span>{{ evento.nombreEvento }}</span>
+                         </div>
+                    </div>
+               </ng-template>
+               }
+          </om-marquee>
+
+          <div class="marquee-gradient left"></div>
+          <div class="marquee-gradient right"></div>
+     </div>
+</section>
+<!-- </om-flickering-grid> -->

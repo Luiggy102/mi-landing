@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AboutMeComponent } from '../about-me-component/about-me-component';
+import { EventosComponent } from "../eventos-component/eventos-component";
 
 @Component({
   selector: 'app-home-component',
-  imports: [AboutMeComponent],
+  imports: [AboutMeComponent, EventosComponent],
   templateUrl: './home-component.html',
   styleUrl: './home-component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

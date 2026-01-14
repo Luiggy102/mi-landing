@@ -10,7 +10,8 @@
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-around; */
+justify-content: center; /* Cambiado de space-around a center */
   align-items: center;
   width: 100%;
   /* max-width: 1200px; */
@@ -23,11 +24,11 @@
   /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
 }
 
-.logo span {
-  /* font-weight: bold; */
+/* .logo span {
+  font-weight: bold;
   font-size: 1rem;
   color: #fff;
-}
+} */
 
 .nav-links {
   display: flex;
@@ -65,8 +66,14 @@
 }
 
 @media (max-width: 768px) {
+.navbar {
+    justify-content: flex-end; 
+  }
+
+
   .hamburger {
     display: flex;
+margin-right: 1rem;
   }
 
   .nav-links {

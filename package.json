@@ -28,6 +28,8 @@
     "@angular/router": "^20.1.0",
     "@ng-icons/bootstrap-icons": "^33.0.0",
     "@ng-icons/core": "^33.0.0",
+    "@omnedia/ngx-flickering-grid": "^4.0.1",
+    "@omnedia/ngx-marquee": "^4.0.1",
     "@tsparticles/angular": "^3.0.0",
     "@tsparticles/engine": "^3.9.1",
     "@tsparticles/slim": "^3.9.1",

@@ -1,0 +1,106 @@
+.eventos-section {
+  padding: 80px 0;
+  background-color:#000000ff;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+::ng-deep .grid-eventos{
+  background-color: #000000 ;
+}
+
+.section-title {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  gap: 20px;
+}
+
+.event-card {
+  position: relative;
+  width: 280px;
+  height: 180px;
+  margin: 0 10px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.event-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+/* Efecto Hover */
+.event-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 210, 255, 0.8); /* Color azul de tu tema */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+}
+
+.event-card:hover .event-overlay {
+  opacity: 1;
+}
+
+.event-overlay span {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Degradados laterales */
+.marquee-gradient {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 15%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-gradient.left {
+  left: 0;
+  background: linear-gradient(to right, #0a0a0a, transparent);
+}
+
+.marquee-gradient.right {
+  right: 0;
+  background: linear-gradient(to left, #0a0a0a, transparent);
+}
+
+@media (max-width: 768px) {
+.event-card {
+}
+}

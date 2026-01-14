@@ -56,7 +56,7 @@ export class AboutMeComponent {
     defaultThemes: {},
     delay: 0,
     fullScreen: {
-      enable: true,
+      enable: false,
       zIndex: 0
     },
     detectRetina: true,
