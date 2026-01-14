@@ -1,0 +1,25 @@
+<section id="acerca-de" class="about-section">
+     <ngx-particles [id]="id" [options]="particlesOptions" (particlesLoaded)="particlesLoaded($event)">
+     </ngx-particles>
+
+     <div class="container content-wrapper">
+          <div class="photo-container">
+               <div class="photo-frame">
+                    <img [src]="userData.miFoto" [alt]="userData.titulo">
+               </div>
+          </div>
+
+          <div class="info-container">
+               <h1 class="title">{{ userData.titulo }}</h1>
+               <p class="description">{{ userData.descripcion }}</p>
+
+               <div class="social-links">
+                    @for (red of userData.contactoRedes; track red.nombre) {
+                    <a [href]="red.link" target="_blank" [title]="red.nombre" class="social-icon">
+                         <ng-icon [name]="red.pathIcono" size="2rem"></ng-icon>
+                    </a>
+                    }
+               </div>
+          </div>
+     </div>
+</section>

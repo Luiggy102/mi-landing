@@ -26,6 +26,8 @@
     "@angular/forms": "^20.1.0",
     "@angular/platform-browser": "^20.1.0",
     "@angular/router": "^20.1.0",
+    "@ng-icons/bootstrap-icons": "^33.0.0",
+    "@ng-icons/core": "^33.0.0",
     "@tsparticles/angular": "^3.0.0",
     "@tsparticles/engine": "^3.9.1",
     "@tsparticles/slim": "^3.9.1",
