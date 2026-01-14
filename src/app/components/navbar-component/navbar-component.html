@@ -1,0 +1,21 @@
+<header class="navbar-container">
+     <nav class="navbar">
+          <div class="logo">
+               <span>&lt;Dev /&gt;</span>
+          </div>
+
+          <button class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
+               <span></span>
+               <span></span>
+               <span></span>
+          </button>
+
+          <ul class="nav-links" [class.active]="isMenuOpen">
+               <li><a href="#acerca-de" (click)="closeMenu()">Acerca de mí</a></li>
+               <li><a href="#experiencia" (click)="closeMenu()">Experiencia</a></li>
+               <li><a href="#habilidades" (click)="closeMenu()">Habilidades</a></li>
+               <li><a href="#cursos" (click)="closeMenu()">Cursos</a></li>
+               <li><a href="#proyectos" (click)="closeMenu()">Proyectos</a></li>
+          </ul>
+     </nav>
+</header>

@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { ExtraOptions, provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 
@@ -9,4 +9,9 @@ export const appConfig: ApplicationConfig = {
     provideZonelessChangeDetection(),
     provideRouter(routes)
   ]
+};
+
+const routerOptions: ExtraOptions = {
+  anchorScrolling: 'enabled',
+  scrollPositionRestoration: 'enabled'
 };

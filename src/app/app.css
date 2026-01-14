@@ -1,0 +1,16 @@
+:root {
+  --navbar-height: 80px;
+}
+
+main {
+  display: block;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
