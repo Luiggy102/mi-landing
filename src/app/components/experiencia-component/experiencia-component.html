@@ -1,0 +1,40 @@
+<section id="experiencia" class="experience-section">
+     <div class="timeline-wrapper">
+          <h1 class="section-title">
+               Mi Experiencia
+          </h1>
+
+          <om-timeline [entryGap]="'2rem'" [titleMaxWidth]="'15rem'" [orientation]="'switch'">
+               @for (exp of experiencias; track exp.nombreEmpresa) {
+               <om-timeline-entry>
+                    <ng-template #timelineTitle>
+                         <div class="timeline-date">
+                              <span class="year">{{ exp.anoInicio }}</span>
+                              <span class="months">{{ exp.mesInicio }} - {{ exp.mesFin }} {{ exp.anoFin || '' }}</span>
+                         </div>
+                    </ng-template>
+
+                    <ng-template #timelineContent>
+                         <div class="experience-card">
+                              <h3 class="role">{{ exp.nombreCargo }}</h3>
+                              <h4 class="company">{{ exp.nombreEmpresa }}</h4>
+
+                              <ul class="activities-list">
+                                   @for (act of exp.actividadesRealizadas; track act.descripcion) {
+                                   <li>
+                                        <p class="activity-desc">{{ act.descripcion }}</p>
+                                        <div class="tech-tags">
+                                             @for (tech of act.tecnologias; track tech) {
+                                             <span class="tech-badge">{{ tech }}</span>
+                                             }
+                                        </div>
+                                   </li>
+                                   }
+                              </ul>
+                         </div>
+                    </ng-template>
+               </om-timeline-entry>
+               }
+          </om-timeline>
+     </div>
+</section>
