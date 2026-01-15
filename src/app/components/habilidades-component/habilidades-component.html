@@ -1,0 +1,26 @@
+<section id="habilidades" class="skills-section">
+     <om-fade direction="down">
+          <h1 class="section-title">Habilidades Técnicas</h1>
+     </om-fade>
+
+     <div class="skills-grid">
+          @for (cat of habilidades; track cat.nombreCategoria; let i = $index) {
+          <om-fade direction="up" class="skill-card-wrapper">
+               <div class="category-card">
+                    <div class="card-header">
+                         <h3 class="category-name">{{ cat.nombreCategoria }}</h3>
+                    </div>
+
+                    <div class="tech-list">
+                         @for (tech of cat.tecnologias; track tech.nombre) {
+                         <div class="tech-item">
+                              <ng-icon [name]="tech.pathIcono" size="1.5rem" class="tech-icon"></ng-icon>
+                              <span class="tech-name">{{ tech.nombre }}</span>
+                         </div>
+                         }
+                    </div>
+               </div>
+          </om-fade>
+          }
+     </div>
+</section>

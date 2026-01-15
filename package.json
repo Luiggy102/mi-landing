@@ -28,6 +28,8 @@
     "@angular/router": "^20.1.0",
     "@ng-icons/bootstrap-icons": "^33.0.0",
     "@ng-icons/core": "^33.0.0",
+    "@ng-icons/ionicons": "^33.0.0",
+    "@omnedia/ngx-fade": "^4.0.1",
     "@omnedia/ngx-flickering-grid": "^4.0.1",
     "@omnedia/ngx-marquee": "^4.0.1",
     "@omnedia/ngx-timeline": "^4.0.1",
