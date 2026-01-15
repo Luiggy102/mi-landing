@@ -6,10 +6,11 @@ import { AcercaDeMi } from '../../interfaces/acerca-de-mi.interface';
 import { CommonModule } from '@angular/common';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { bootstrapEnvelopeAtFill, bootstrapGithub, bootstrapLinkedin } from '@ng-icons/bootstrap-icons';
+import { NgxTypewriterComponent } from '@omnedia/ngx-typewriter';
 
 @Component({
   selector: 'app-about-me-component',
-  imports: [CommonModule, NgxParticlesModule, NgIconComponent],
+  imports: [CommonModule, NgxParticlesModule, NgxTypewriterComponent, NgIconComponent],
   templateUrl: 'about-me-component.html',
   styleUrl: './about-me-component.css',
   viewProviders: [provideIcons({ bootstrapGithub, bootstrapLinkedin, bootstrapEnvelopeAtFill })],
@@ -18,7 +19,6 @@ import { bootstrapEnvelopeAtFill, bootstrapGithub, bootstrapLinkedin } from '@ng
 export class AboutMeComponent {
   id = "tsparticles";
 
-  // Información "quemada" basada en tu interfaz
   userData: AcercaDeMi = {
     titulo: 'Desarrollador Fullstack & Arquitecto de Soluciones',
     descripcion: 'Hola, soy un apasionado por crear sistemas robustos y escalables. Me especializo en transformar ideas complejas en aplicaciones funcionales y atractivas, dominando tecnologías tanto en el Frontend como en el Backend.',

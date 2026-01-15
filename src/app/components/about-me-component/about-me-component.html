@@ -10,7 +10,12 @@
           </div>
 
           <div class="info-container">
-               <h1 class="title">{{ userData.titulo }}</h1>
+               <h1 class="title">
+                    Hola soy ...!, Desarrollador
+                    <om-typewriter [words]="['Frontend','Backend','Fullstack']" [writeSpeed]="300"
+                         [styleClass]="'title'">
+                    </om-typewriter>
+               </h1>
                <p class="description">{{ userData.descripcion }}</p>
 
                <div class="social-links">

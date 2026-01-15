@@ -65,7 +65,7 @@ ngx-particles {
 }
 
 .title {
-  font-size: clamp(1.8rem, 5vw, 2.8rem); /* Tamaño fluido */
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
   margin-top: 0;
   margin-bottom: 1rem;
   font-weight: 800;
@@ -73,6 +73,9 @@ ngx-particles {
   background: linear-gradient(90deg, #fff, #00d2ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+om-typewriter {
+  display: inline-flex !important;
 }
 
 .description {
