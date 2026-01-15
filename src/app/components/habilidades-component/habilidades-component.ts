@@ -2,9 +2,11 @@ import { CommonModule } from '@angular/common';
 import { NgxFadeComponent } from '@omnedia/ngx-fade';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { bootstrapCodeSlash, bootstrapDatabase, bootstrapCloud } from '@ng-icons/bootstrap-icons';
-import { ionGitCommit, ionLogoAngular, ionLogoDocker, ionLogoLaravel, ionLogoNodejs, ionLogoReact } from '@ng-icons/ionicons';
+import { ionGitBranch, ionGitCommit, ionLogoAngular, ionLogoDocker, ionLogoLaravel, ionLogoNodejs, ionLogoReact } from '@ng-icons/ionicons';
 import { CategoriaHabilidad } from '../../interfaces/categoria-habilidad.interface';
 import { Component } from '@angular/core';
+import { tablerBrandGolang } from '@ng-icons/tabler-icons';
+import { simpleDotnet, simpleMongodb, simpleMysql, simplePostgresql, simplePostman } from '@ng-icons/simple-icons';
 
 @Component({
      selector: 'app-habilidades',
@@ -16,7 +18,9 @@ import { Component } from '@angular/core';
           provideIcons({
                bootstrapCodeSlash, bootstrapDatabase, bootstrapCloud,
                ionLogoAngular, ionLogoReact, ionLogoLaravel,
-               ionLogoDocker, ionLogoNodejs, ionGitCommit,
+               ionLogoDocker, ionLogoNodejs, ionGitBranch,
+               tablerBrandGolang, simplePostman, simpleDotnet,
+               simpleMongodb, simplePostgresql, simpleMysql
           })
      ]
 })
@@ -33,25 +37,26 @@ export class HabilidadesComponent {
           {
                nombreCategoria: 'Backend',
                tecnologias: [
-                    { nombre: 'ASP.NET Core (C#)', pathIcono: 'bootstrapCodeSlash' },
+                    { nombre: 'ASP.NET Core (C#)', pathIcono: 'simpleDotnet' },
                     { nombre: 'Laravel (PHP)', pathIcono: 'ionLogoLaravel' },
-                    { nombre: 'Node.js', pathIcono: 'ionLogoNodejs' }
+                    { nombre: 'Golang', pathIcono: 'tablerBrandGolang' },
                ]
           },
           {
                nombreCategoria: 'Base de Datos',
                tecnologias: [
                     { nombre: 'SQL Server', pathIcono: 'bootstrapDatabase' },
-                    { nombre: 'MySQL', pathIcono: 'bootstrapDatabase' },
-                    { nombre: 'PostgreSQL', pathIcono: 'bootstrapDatabase' }
+                    { nombre: 'MySQL', pathIcono: 'simpleMysql' },
+                    { nombre: 'PostgreSQL', pathIcono: 'simplePostgresql' },
+                    { nombre: 'MongoDB', pathIcono: 'simpleMongodb' }
                ]
           },
           {
                nombreCategoria: 'Herramientas & Cloud',
                tecnologias: [
-                    { nombre: 'Git', pathIcono: 'ionGitCommit' },
+                    { nombre: 'Git', pathIcono: 'ionGitBranch' },
                     { nombre: 'Docker', pathIcono: 'ionLogoDocker' },
-                    { nombre: 'cPanel / DNS', pathIcono: 'bootstrapCloud' }
+                    { nombre: 'Postman', pathIcono: 'simplePostman' },
                ]
           }
      ];

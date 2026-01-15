@@ -1,0 +1,31 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NgxFadeComponent } from '@omnedia/ngx-fade';
+import { Curso } from '../../interfaces/curso.interface';
+
+@Component({
+     selector: 'app-cursos',
+     standalone: true,
+     imports: [CommonModule, NgxFadeComponent],
+     templateUrl: './cursos-component.html',
+     styleUrl: './cursos-component.css'
+})
+export class CursosComponent {
+     public cursos: Curso[] = [
+          {
+               nombreCurso: 'AWS Certified Cloud Practitioner',
+               pathIcono: 'assets/badges/aws-cp.png', // Asegúrate de tener la imagen o un placeholder
+               estado: 'En Curso'
+          },
+          {
+               nombreCurso: 'Angular: De Cero a Experto',
+               pathIcono: 'assets/badges/angular-badge.png',
+               estado: 'Certificado'
+          },
+          {
+               nombreCurso: 'Arquitectura de Microservicios con .NET',
+               pathIcono: 'assets/badges/dotnet-badge.png',
+               estado: 'Certificado'
+          }
+     ];
+}

@@ -1,0 +1,25 @@
+<section id="cursos" class="courses-section">
+  <om-fade direction="down">
+    <h1 class="section-title">Cursos y Certificaciones</h1>
+  </om-fade>
+
+  <div class="courses-grid">
+    @for (curso of cursos; track curso.nombreCurso) {
+      <om-fade direction="up">
+        <div class="course-card">
+          <div class="badge-container">
+            <img [src]="curso.pathIcono" [alt]="curso.nombreCurso" class="badge-img" 
+                 onerror="this.src='https://placehold.co/150x150/0d213a/FFFFFF?text=Badge'">
+          </div>
+          
+          <div class="course-info">
+            <h3 class="course-name">{{ curso.nombreCurso }}</h3>
+            <span class="status-label" [ngClass]="{'en-curso': curso.estado === 'En Curso', 'certificado': curso.estado === 'Certificado'}">
+              {{ curso.estado }}
+            </span>
+          </div>
+        </div>
+      </om-fade>
+    }
+  </div>
+</section>
