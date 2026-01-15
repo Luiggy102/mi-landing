@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxFadeComponent } from '@omnedia/ngx-fade';
 import { Curso } from '../../interfaces/curso.interface';
+import { NgxFlickeringGridComponent } from '@omnedia/ngx-flickering-grid';
 
 @Component({
      selector: 'app-cursos',
@@ -14,7 +15,7 @@ export class CursosComponent {
      public cursos: Curso[] = [
           {
                nombreCurso: 'AWS Certified Cloud Practitioner',
-               pathIcono: 'assets/badges/aws-cp.png', // Asegúrate de tener la imagen o un placeholder
+               pathIcono: 'assets/badges/aws-cp.png',
                estado: 'En Curso'
           },
           {

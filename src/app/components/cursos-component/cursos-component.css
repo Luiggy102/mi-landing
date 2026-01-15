@@ -8,6 +8,10 @@
   width: 100%;
 }
 
+/* ::ng-deep .grid-eventos{
+  background-color: #1d1b1bff ;
+} */
+
 .section-title {
   font-size: 3rem;
   font-weight: bold;
