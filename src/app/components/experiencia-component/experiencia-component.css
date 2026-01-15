@@ -130,11 +130,11 @@
     margin-left:0.7rem; */
   }
      ::ng-deep .om-timeline-entry.left-side{
-     margin-right:0.9rem;
+     margin-right:2rem;
      }
 
      ::ng-deep .om-timeline-entry.right-side{
-     margin-left:0.9rem;
+     margin-left:2rem;
      }
 
   /* .left-side .experience-card {
