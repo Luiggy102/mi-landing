@@ -1,0 +1,28 @@
+<div class="project-card">
+     <div class="project-preview">
+          <img [src]="proyecto.imagenPreview" [alt]="proyecto.nombreProyecto">
+     </div>
+
+     <div class="project-info">
+          <div class="project-header">
+               <h3 class="project-title">{{ proyecto.nombreProyecto }}</h3>
+               <div class="project-links">
+                    @for (link of proyecto.links; track link.link) {
+                    <a [href]="link.link" target="_blank" class="link-icon">
+                         <ng-icon [name]="link.pathIcono" size="1.5rem"></ng-icon>
+                    </a>
+                    }
+               </div>
+          </div>
+
+          <p class="project-description">{{ proyecto.descripcionProyecto }}</p>
+
+          <div class="project-tech-stack">
+               @for (tech of proyecto.tecnologias; track tech.nombre) {
+               <div class="tech-icon-wrapper" [title]="tech.nombre">
+                    <img [src]="tech.pathIcono" [alt]="tech.nombre" class="tech-mini-icon">
+               </div>
+               }
+          </div>
+     </div>
+</div>

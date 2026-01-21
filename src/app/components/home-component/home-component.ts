@@ -4,10 +4,11 @@ import { EventosComponent } from "../eventos-component/eventos-component";
 import { ExperienciaComponent } from "../experiencia-component/experiencia-component";
 import { HabilidadesComponent } from "../habilidades-component/habilidades-component";
 import { CursosComponent } from "../cursos-component/cursos-component";
+import { ProyectosComponent } from "../proyectos-component/proyectos-component";
 
 @Component({
   selector: 'app-home-component',
-  imports: [AboutMeComponent, EventosComponent, ExperienciaComponent, HabilidadesComponent, CursosComponent],
+  imports: [AboutMeComponent, EventosComponent, ExperienciaComponent, HabilidadesComponent, CursosComponent, ProyectosComponent],
   templateUrl: './home-component.html',
   styleUrl: './home-component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

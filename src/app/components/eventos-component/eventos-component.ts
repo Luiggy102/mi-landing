@@ -5,7 +5,7 @@ import { NgxFlickeringGridComponent } from '@omnedia/ngx-flickering-grid';
 
 @Component({
   selector: 'app-eventos-component',
-  imports: [NgxMarqueeComponent, OmMarqueeItemDirective, NgxFlickeringGridComponent],
+  imports: [NgxMarqueeComponent, OmMarqueeItemDirective],
   templateUrl: './eventos-component.html',
   styleUrl: './eventos-component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -13,11 +13,14 @@
 } */
 
 .section-title {
-  font-size: 3rem;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 4rem;
   text-align: center;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 5rem;
+  background: linear-gradient(to bottom, #fff 0%, #353535 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .courses-grid {

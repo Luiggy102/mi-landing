@@ -1,0 +1,74 @@
+.projects-section {
+  padding: 100px 20px;
+  /* background-color: #0d0d0d;  */
+  /* Fondo de malla sutil similar al de experiencia para dar textura */
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px); */
+  background-size: 60px 60px;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+::ng-deep .grid-proyectos{
+  background-color: #000000 ;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 5rem;
+  background: linear-gradient(to bottom, #fff 0%, #353535 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.projects-grid {
+  display: grid;
+  /* Crea columnas automáticas de mínimo 350px. Si no caben, se apilan */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  max-width: 1250px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+/* Asegura que el componente de animación om-fade no rompa el layout del grid */
+om-fade {
+  display: block;
+  height: 100%;
+}
+
+/* --- AJUSTES RESPONSIVOS --- */
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 80px 15px;
+  }
+
+  .section-title {
+    margin-bottom: 3rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .projects-section {
+    padding: 80px 15px;
+  }
+  .section-title {
+    font-size: 3rem;
+  }
+
+}

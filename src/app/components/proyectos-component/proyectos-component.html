@@ -1,0 +1,15 @@
+<om-vortex styleClass="grid-proyectos">
+     <section id="proyectos" class="projects-section">
+          <om-fade direction="down">
+               <h1 class="section-title">Proyectos Destacados</h1>
+          </om-fade>
+
+          <div class="projects-grid">
+               @for (p of proyectos; track p.nombreProyecto) {
+               <om-fade direction="up">
+                    <app-proyecto-card [proyecto]="p"></app-proyecto-card>
+               </om-fade>
+               }
+          </div>
+     </section>
+</om-vortex>

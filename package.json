@@ -36,6 +36,7 @@
     "@omnedia/ngx-marquee": "^4.0.1",
     "@omnedia/ngx-timeline": "^4.0.1",
     "@omnedia/ngx-typewriter": "^4.0.1",
+    "@omnedia/ngx-vortex": "^4.0.1",
     "@tsparticles/angular": "^3.0.0",
     "@tsparticles/engine": "^3.9.1",
     "@tsparticles/slim": "^3.9.1",
