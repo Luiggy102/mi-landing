@@ -1,27 +1,37 @@
 .navbar-container {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 7vh;
+position: fixed;
+  /* top: 20px;  */
+  left: 50%;
+  transform: translateX(-50%); /* Centrado perfecto */
+  width: 95%; /* Ocupa casi todo el ancho en móviles */
+  max-width: 1000px; /* Ancho máximo en pantallas grandes */
   z-index: 1000;
   display: flex;
   justify-content: center;
+  transition: all 0.3s ease; /* Para efectos suaves al hacer scroll */
+
 }
 
 .navbar {
-  display: flex;
-  /* justify-content: space-around; */
-justify-content: center; /* Cambiado de space-around a center */
+display: flex;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
-  /* max-width: 1200px; */
-  padding: 0.8rem 2rem;
-  /* Efecto Glassmorphism */
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+  padding: 0.8rem 2.5rem;
+  
+  /* Forma de Píldora */
+  border-radius: 0px 0px 25px 25px; 
+  
+  /* Glassmorphism Refinado */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* Sombra para dar profundidad */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+
 }
 
 /* .logo span {
@@ -31,9 +41,11 @@ justify-content: center; /* Cambiado de space-around a center */
 } */
 
 .nav-links {
-  display: flex;
+display: flex;
   list-style: none;
-  gap: 3rem;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
@@ -66,8 +78,16 @@ justify-content: center; /* Cambiado de space-around a center */
 }
 
 @media (max-width: 768px) {
+
+.navbar-container {
+position: fixed;
+  width: 100%; /* Ocupa casi todo el ancho en móviles */
+
+}
+
 .navbar {
     justify-content: flex-end; 
+  border-radius: 0px; 
   }
 
 
