@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { NgxTimelineComponent, NgxTimelineEntryComponent } from '@omnedia/ngx-timeline';
 import { Experiencia } from '../../interfaces/experiencia.interface';
 import { Component } from '@angular/core';
@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 @Component({
      selector: 'app-experiencia',
      standalone: true,
-     imports: [CommonModule, NgxTimelineComponent, NgxTimelineEntryComponent],
+     imports: [NgxTimelineComponent, NgxTimelineEntryComponent],
      templateUrl: './experiencia-component.html',
      styleUrl: './experiencia-component.css'
 })

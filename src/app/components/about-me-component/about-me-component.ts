@@ -3,14 +3,14 @@ import { NgParticlesService, NgxParticlesModule } from '@tsparticles/angular';
 import { Container, Engine, ISourceOptions } from '@tsparticles/engine';
 import { loadSlim } from '@tsparticles/slim';
 import { AcercaDeMi } from '../../interfaces/acerca-de-mi.interface';
-import { CommonModule } from '@angular/common';
+
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { bootstrapEnvelopeAtFill, bootstrapGithub, bootstrapLinkedin } from '@ng-icons/bootstrap-icons';
 import { NgxTypewriterComponent } from '@omnedia/ngx-typewriter';
 
 @Component({
   selector: 'app-about-me-component',
-  imports: [CommonModule, NgxParticlesModule, NgxTypewriterComponent, NgIconComponent],
+  imports: [NgxParticlesModule, NgxTypewriterComponent, NgIconComponent],
   templateUrl: 'about-me-component.html',
   styleUrl: './about-me-component.css',
   viewProviders: [provideIcons({ bootstrapGithub, bootstrapLinkedin, bootstrapEnvelopeAtFill })],

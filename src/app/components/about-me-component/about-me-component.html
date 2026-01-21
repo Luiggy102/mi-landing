@@ -11,9 +11,8 @@
 
           <div class="info-container">
                <h1 class="title">
-                    Hola soy ...!, Desarrollador
-                    <om-typewriter [words]="['Frontend','Backend','Fullstack']" [writeSpeed]="300"
-                         [styleClass]="'title'">
+                    <om-typewriter [words]="[userData.titulo]" [disableLoop]="true" [writeSpeed]="60" [startDelay]="300"
+                         [textCursorColor]="'#0a0a0a'" [styleClass]="'title'">
                     </om-typewriter>
                </h1>
                <p class="description">{{ userData.descripcion }}</p>

@@ -7,7 +7,7 @@
   justify-content: center;
   overflow: hidden;
   padding: 100px 20px; /* Padding suficiente para la navbar */
-  background-color: #0a0a0a; /* Fallback por si las partículas tardan en cargar */
+  background-color: #0a0a0a;
   box-sizing: border-box;
 }
 
@@ -64,18 +64,41 @@ ngx-particles {
   text-align: left;
 }
 
+/* Quitamos el gradiente del h1 para que no haya conflicto */
 .title {
   font-size: clamp(1.8rem, 5vw, 2.8rem);
-  margin-top: 0;
-  margin-bottom: 1rem;
   font-weight: 800;
   line-height: 1.2;
-  background: linear-gradient(90deg, #fff, #00d2ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: none; 
+
+/* color: #f0faff;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.4), 
+               0 0 20px rgba(0, 210, 255, 0.2); */
+
+color: #e0f7ff; 
+  text-shadow: 0 0 10px rgba(224, 247, 255, 0.5);
+
+  /* color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 210, 255, 0.3); */
 }
-om-typewriter {
-  display: inline-flex !important;
+
+/* Forzamos el gradiente al elemento interno que usa la styleClass */
+::ng-deep .gradient-text {
+  background: linear-gradient(90deg, #ffffff, #00d2ff) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  
+  /* Esto es vital para Chrome */
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  
+  display: inline-block;
+  margin: 0;
+}
+
+/* Aseguramos que el cursor no desaparezca por el transparente */
+::ng-deep .om-typewriter-cursor {
+  -webkit-text-fill-color: currentColor !important;
 }
 
 .description {

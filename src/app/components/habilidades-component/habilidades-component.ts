@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { NgxFadeComponent } from '@omnedia/ngx-fade';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { bootstrapCodeSlash, bootstrapDatabase, bootstrapCloud } from '@ng-icons/bootstrap-icons';
@@ -11,7 +11,7 @@ import { simpleDotnet, simpleMongodb, simpleMysql, simplePostgresql, simplePostm
 @Component({
      selector: 'app-habilidades',
      standalone: true,
-     imports: [CommonModule, NgxFadeComponent, NgIconComponent],
+     imports: [NgxFadeComponent, NgIconComponent],
      templateUrl: './habilidades-component.html',
      styleUrl: './habilidades-component.css',
      viewProviders: [
