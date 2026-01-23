@@ -1,36 +1,22 @@
 import { Injectable } from '@angular/core';
-import { AcercaDeMi } from '../interfaces/acerca-de-mi.interface';
+import { HttpClient } from '@angular/common/http';
+import { Observable, shareReplay } from 'rxjs';
+import { PortfolioData } from '../interfaces/portfolio-data.interface';
 
-@Injectable({
-     providedIn: 'root'
-})
+
+@Injectable({ providedIn: 'root' })
 export class DataService {
+     private readonly API_URL = 'https://tu-api.execute-api.us-east-1.amazonaws.com/prod/data';
+     private data$?: Observable<PortfolioData>;
 
-     constructor() { }
+     constructor(private http: HttpClient) { }
 
-     getAcercaDeMiData(): AcercaDeMi {
-          const data: AcercaDeMi = {
-               titulo: 'Hola, soy [Tu Nombre Completo]',
-               miFoto: 'https://placehold.co/400x400/0d213a/FFFFFF?text=Tu+Foto',
-               descripcion: `Desarrollador Full-Stack con más de X años de experiencia creando soluciones web robustas y escalables. Apasionado por la tecnología, el código limpio y las buenas prácticas. Me especializo en el ecosistema de JavaScript, trabajando con frameworks como Angular para el frontend y Node.js para el backend.`,
-               contactoRedes: [
-                    {
-                         nombre: 'LinkedIn',
-                         pathIcono: 'linkedin',
-                         link: 'https://www.linkedin.com/in/tu-usuario/'
-                    },
-                    {
-                         nombre: 'GitHub',
-                         pathIcono: 'github',
-                         link: 'https://github.com/tu-usuario'
-                    },
-                    {
-                         nombre: 'Email',
-                         pathIcono: 'email',
-                         link: 'mailto:tu-correo@example.com'
-                    }
-               ]
-          };
-          return data;
+     getPortfolioData(): Observable<PortfolioData> {
+          if (!this.data$) {
+               this.data$ = this.http.get<PortfolioData>(this.API_URL).pipe(
+                    shareReplay(1)
+               );
+          }
+          return this.data$;
      }
 }
