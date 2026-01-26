@@ -17,11 +17,11 @@ export class ExperienciaData {
       actividadesRealizadas: [
         {
           descripcion: 'Desarrollo a nivel de frontend y backend de plataforma de Guías de remisión',
-          tecnologias: ['Angular', 'TypeScript', 'ASP.NET', 'Entity Framework', 'C#', 'JWT', 'Azure Data Studio', 'SQL Server']
+          tecnologias: ['Angular', 'ASP.NET', 'Entity Framework', 'JWT', 'SQL Server']
         },
         {
           descripcion: 'Mantenimiento y Desarrollo frontend y backend para plataforma crypto MVP',
-          tecnologias: ['React', 'Express.JS', 'MongoDB', 'JavaScript', 'APIs']
+          tecnologias: ['React', 'Express.JS', 'MongoDB', 'APIs']
         },
         {
           descripcion: 'Desarrollo fullstack para software contable',
@@ -54,7 +54,7 @@ export class ExperienciaData {
           tecnologias: ['Angular']
         },
         {
-          descripcion: 'Mantenimiento y desarrollo de features a plataforma de gestión de torneos de Poker',
+          descripcion: 'Mantenimiento y desarrollo de features a plataforma de gestión de torneos de Póker',
           tecnologias: ['Laravel', 'Blade Templates', 'Laravel Sanctum']
         },
         {

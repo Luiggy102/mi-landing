@@ -9,19 +9,34 @@ export class CursosData {
   public cursosData: Curso[] = [
     {
       nombreCurso: 'AWS Certified Cloud Practitioner',
-      pathIcono: 'assets/badges/aws-cp.png',
+      pathIcono: 'assets/img/cloudpractitioner.webp',
       estado: 'En Curso'
     },
     {
-      nombreCurso: 'Angular: De Cero a Experto',
-      pathIcono: 'assets/badges/angular-badge.png',
+      nombreCurso: 'Curso de APIs con .NET',
+      pathIcono: 'assets/img/diplomaapisnet.jpg',
       estado: 'Certificado'
     },
     {
-      nombreCurso: 'Arquitectura de Microservicios con .NET',
-      pathIcono: 'assets/badges/dotnet-badge.png',
+      nombreCurso: 'Curso de PostgreSQL',
+      pathIcono: 'assets/img/diplomapostgres.jpg',
       estado: 'Certificado'
-    }
+    },
+    {
+      nombreCurso: 'Curso de Go Avanzado: Arquitectura de Eventos y CQRS',
+      pathIcono: 'assets/img/diplomagoeventoscqrs.jpg',
+      estado: 'Certificado'
+    },
+    {
+      nombreCurso: 'Curso de Go Avanzado: Protobuffers y gRPC',
+      pathIcono: 'assets/img/diplomagoprotobufgrpc.jpg',
+      estado: 'Certificado'
+    },
+    {
+      nombreCurso: 'Curso Profesional de Git y GitHub',
+      pathIcono: 'assets/img/diplomagithub.jpg',
+      estado: 'Certificado'
+    },
   ];
 
 }

@@ -18,9 +18,9 @@ export class FooterComponent {
      showGlobe = isPlatformBrowser(this.platformId);
      // Reutilizamos tus redes sociales
      public redes = [
-          { nombre: 'LinkedIn', icono: 'bootstrapLinkedin', link: 'https://linkedin.com/in/tu-usuario' },
-          { nombre: 'GitHub', icono: 'bootstrapGithub', link: 'https://github.com/tu-usuario' },
-          { nombre: 'Email', icono: 'bootstrapEnvelopeAtFill', link: 'mailto:tu-correo@ejemplo.com' }
+          { nombre: 'LinkedIn', icono: 'bootstrapLinkedin', link: 'https://www.linkedin.com/in/luidev/' },
+          { nombre: 'GitHub', icono: 'bootstrapGithub', link: 'https://github.com/luiggy102/' },
+          { nombre: 'Email', icono: 'bootstrapEnvelopeAtFill', link: 'mailto:work_luiggyn.h5d9a@slmail.me' }
      ];
 
      public currentYear = new Date().getFullYear();
