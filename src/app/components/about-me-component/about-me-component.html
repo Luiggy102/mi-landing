@@ -5,20 +5,20 @@
      <div class="container content-wrapper">
           <div class="photo-container">
                <div class="photo-frame">
-                    <img [src]="userData.miFoto" [alt]="userData.titulo">
+                    <img [src]="userData?.miFoto" [alt]="userData?.titulo">
                </div>
           </div>
 
           <div class="info-container">
                <h1 class="title">
-                    <om-typewriter [words]="[userData.titulo]" [disableLoop]="true" [writeSpeed]="60" [startDelay]="300"
-                         [textCursorColor]="'#0a0a0a'" [styleClass]="'title'">
+                    <om-typewriter [words]="[userData!.titulo]" [disableLoop]="true" [writeSpeed]="60"
+                         [startDelay]="300" [textCursorColor]="'#0a0a0a'" [styleClass]="'title'">
                     </om-typewriter>
                </h1>
-               <p class="description">{{ userData.descripcion }}</p>
+               <p class="description">{{ userData!.descripcion }}</p>
 
                <div class="social-links">
-                    @for (red of userData.contactoRedes; track red.nombre) {
+                    @for (red of userData?.contactoRedes; track red.nombre) {
                     <a [href]="red.link" target="_blank" [title]="red.nombre" class="social-icon">
                          <ng-icon [name]="red.pathIcono" size="2rem"></ng-icon>
                     </a>
