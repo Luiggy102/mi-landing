@@ -96,6 +96,26 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.badge-link {
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.badge-link:hover {
+  transform: scale(1.1); /* Efecto de crecimiento al pasar el mouse */
+  filter: brightness(1.2);
+}
+
+.badge-img.clickable {
+  cursor: pointer;
+}
+
+/* Opcional: un pequeño brillo para las certificadas */
+/* .course-card:has(.badge-link) {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.05);
+} */
+
 /* Responsivo */
 @media (max-width: 768px) {
   .courses-grid {

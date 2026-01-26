@@ -1,4 +1,3 @@
-<!-- <om-flickering-grid [squareSize]="6" [color]="'#fff'" styleClass="grid-eventos"> -->
 <section id="cursos" class="courses-section">
   <om-fade direction="down">
     <h1 class="section-title">Cursos y Certificaciones</h1>
@@ -8,9 +7,15 @@
     @for (curso of cursos; track curso.nombreCurso) {
     <om-fade direction="up">
       <div class="course-card">
+
         <div class="badge-container">
-          <img [src]="curso.pathIcono" [alt]="curso.nombreCurso" class="badge-img"
-            onerror="this.src='https://placehold.co/150x150/0d213a/FFFFFF?text=Badge'">
+          @if (curso.estado === 'Certificado' && curso.enlaceCertificacion) {
+          <a [href]="curso.enlaceCertificacion" target="_blank" class="badge-link" title="Ver certificación">
+            <img [src]="curso.pathIcono" [alt]="curso.nombreCurso" class="badge-img clickable">
+          </a>
+          } @else {
+          <img [src]="curso.pathIcono" [alt]="curso.nombreCurso" class="badge-img">
+          }
         </div>
 
         <div class="course-info">
@@ -25,5 +30,3 @@
     }
   </div>
 </section>
-
-<!-- </om-flickering-grid> -->
