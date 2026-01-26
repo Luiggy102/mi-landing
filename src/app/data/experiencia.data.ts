@@ -55,7 +55,7 @@ export class ExperienciaData {
         },
         {
           descripcion: 'Mantenimiento y desarrollo de features a plataforma de gestión de torneos de Poker',
-          tecnologias: ['Laravel', 'Blade Templates', 'Laravel sanctum']
+          tecnologias: ['Laravel', 'Blade Templates', 'Laravel Sanctum']
         },
         {
           descripcion: 'Implementación de chatbot con IA en web para servicio al cliente',
