@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { NgxMarqueeComponent, OmMarqueeItemDirective } from '@omnedia/ngx-marquee';
 import { Evento } from '../../interfaces/evento.interface';
-import { NgxFlickeringGridComponent } from '@omnedia/ngx-flickering-grid';
 
 @Component({
   selector: 'app-eventos-component',
@@ -13,6 +12,10 @@ import { NgxFlickeringGridComponent } from '@omnedia/ngx-flickering-grid';
 export class EventosComponent {
   public eventosFila1: Evento[] = [];
   public eventosFila2: Evento[] = [];
+
+  get eventos(): Evento[] {
+    return this.eventosFila1;
+  }
 
   @Input() set eventos(value: Evento[] | undefined) {
     if (value) {
