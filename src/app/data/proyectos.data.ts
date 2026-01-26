@@ -8,33 +8,50 @@ export class ProyectosData {
 
   public proyectosData: Proyecto[] = [
     {
-      nombreProyecto: 'My PDF Toolkit',
-      imagenPreview: 'assets/projects/pdf-toolkit.png',
-      descripcionProyecto: 'Aplicación web robusta para manipular archivos PDF: comprimir, extraer páginas y convertir a imágenes.',
+      nombreProyecto: 'Portafolio Cloud-Native',
+      imagenPreview: 'assets/img/imagenPortafolio.webp',
+      descripcionProyecto: `
+      Landing page profesional de alto rendimiento diseñada bajo una arquitectura 100% en la nube. Implementada en Angular, la infraestructura utiliza Amazon S3 para almacenamiento, CloudFront como CDN global para baja latencia.
+      `,
       links: [
-        { pathIcono: 'bootstrapGlobe2', link: 'https://mypdftoolkit.com' },
-        { pathIcono: 'bootstrapGithub', link: 'https://github.com/tu-usuario/pdf-toolkit' }
+        { pathIcono: 'bootstrapGlobe2', link: 'https://luitamayo.com' },
+        { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/mi-landing/' }
       ],
       tecnologias: [
-        { nombre: 'Python', pathIcono: 'assets/icons/python.png' },
-        { nombre: 'Flask', pathIcono: 'assets/icons/flask.png' },
-        { nombre: 'AWS', pathIcono: 'assets/icons/aws.png' },
-        { nombre: 'Docker', pathIcono: 'assets/icons/docker.png' }
+        { nombre: 'Angular', pathIcono: 'ionLogoAngular' },
+        { nombre: 'AWS', pathIcono: 'tablerBrandAws' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
       ]
     },
     {
-      nombreProyecto: 'Sistema WMS P4W',
-      imagenPreview: 'assets/projects/wms-preview.png',
-      descripcionProyecto: 'Warehouse Management System completo para la gestión de inventarios, bodegas y logística en tiempo real.',
+      nombreProyecto: 'Upgit',
+      imagenPreview: 'assets/img/imagenUpgit.webp',
+      descripcionProyecto: `
+      Herramienta CLI para estar al tanto de multiples repositorios Git y Github en conjunto asi como trae cambios concurrientemente si existe
+      `,
       links: [
-        { pathIcono: 'bootstrapGithub', link: 'https://github.com/tu-usuario/wms-project' }
+        { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/upgit' }
       ],
       tecnologias: [
-        { nombre: 'Angular', pathIcono: 'assets/icons/angular.png' },
-        { nombre: 'ASP.NET Core', pathIcono: 'assets/icons/dotnet.png' },
-        { nombre: 'SQL Server', pathIcono: 'assets/icons/sqlserver.png' }
+        { nombre: 'Golang', pathIcono: 'tablerBrandGolang' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
       ]
-    }
+    },
+    {
+      nombreProyecto: 'Ligapro-cli',
+      imagenPreview: 'assets/img/imagenLigaProCli.webp',
+      descripcionProyecto: `
+        CLI web-scrapper para estar al tanto de la serie A de Ecuador LigaPro
+      `,
+      links: [
+        { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/ligapro-cli' }
+      ],
+      tecnologias: [
+        { nombre: 'Golang', pathIcono: 'tablerBrandGolang' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
+      ]
+    },
+
   ];
 
 }

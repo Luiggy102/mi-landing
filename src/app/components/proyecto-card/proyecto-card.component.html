@@ -8,7 +8,7 @@
                <h3 class="project-title">{{ proyecto.nombreProyecto }}</h3>
                <div class="project-links">
                     @for (link of proyecto.links; track link.link) {
-                    <a [href]="link.link" target="_blank" class="link-icon">
+                    <a [href]="link.link" target="_blank" class="link-icon" [title]="link.pathIcono">
                          <ng-icon [name]="link.pathIcono" size="1.5rem"></ng-icon>
                     </a>
                     }
@@ -20,7 +20,8 @@
           <div class="project-tech-stack">
                @for (tech of proyecto.tecnologias; track tech.nombre) {
                <div class="tech-icon-wrapper" [title]="tech.nombre">
-                    <img [src]="tech.pathIcono" [alt]="tech.nombre" class="tech-mini-icon">
+                    <ng-icon [name]="tech.pathIcono" size="1.2rem" class="tech-mini-icon">
+                    </ng-icon>
                </div>
                }
           </div>
