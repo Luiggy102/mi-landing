@@ -522,7 +522,9 @@ export class AboutMeComponent {
   };
 
   constructor(private readonly ngParticlesService: NgParticlesService) { }
-  particlesLoaded(container: Container): void { console.log(container); }
+  particlesLoaded(container: Container): void {
+    //  console.log(container);
+  }
   ngOnInit(): void {
     this.ngParticlesService.init(async (engine: Engine) => { await loadSlim(engine); });
   }
