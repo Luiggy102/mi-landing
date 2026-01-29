@@ -29,4 +29,5 @@ import { simpleDotnet, simpleJavascript, simpleLinux, simpleMongodb, simpleMysql
 export class HabilidadesComponent {
 
      @Input() habilidades: CategoriaHabilidad[] = [];
+     @Input() tituloSeccion: string = '';
 }

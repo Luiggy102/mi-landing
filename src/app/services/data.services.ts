@@ -26,19 +26,24 @@ export class DataService {
           const data: PortfolioData = {
                ABOUT_ME: this.aboutMe.userData,
                EXPERIENCE: {
+                    tituloSeccion: 'Mi Experiencia',
                     lista: this.experiencia.experienciasData
                },
+               EVENTS: {
+                    tituloSeccion: 'Eventos y Comunidad',
+                    lista: this.eventos.eventosData
+               },
                SKILLS: {
+                    tituloSeccion: 'Habilidades Técnicas',
                     lista: this.habilidades.habilidadesData
                },
                PROJECTS: {
+                    tituloSeccion: 'Proyectos Destacados',
                     lista: this.proyectos.proyectosData
                },
                COURSES: {
+                    tituloSeccion: 'Cursos y Certificaciones',
                     lista: this.cursos.cursosData
-               },
-               EVENTS: {
-                    lista: this.eventos.eventosData
                },
                FOOTER: this.footer.footerData
           };

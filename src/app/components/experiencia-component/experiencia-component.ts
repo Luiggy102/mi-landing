@@ -12,4 +12,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ExperienciaComponent {
      @Input() experiencias: Experiencia[] = [];
+     @Input() tituloSeccion: string = '';
 }

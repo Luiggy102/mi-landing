@@ -2,15 +2,17 @@
 
 <app-about-me-component [userData]="data.ABOUT_ME"></app-about-me-component>
 
-<app-eventos-component [eventos]="data.EVENTS.lista"></app-eventos-component>
+<app-eventos-component [tituloSeccion]="data.EVENTS.tituloSeccion ?? ''"
+     [eventos]="data.EVENTS.lista"></app-eventos-component>
 
-<app-experiencia [experiencias]="data.EXPERIENCE.lista"></app-experiencia>
+<app-experiencia [tituloSeccion]="data.EXPERIENCE.tituloSeccion ?? ''"
+     [experiencias]="data.EXPERIENCE.lista"></app-experiencia>
 
-<app-habilidades [habilidades]="data.SKILLS.lista"></app-habilidades>
+<app-habilidades [tituloSeccion]="data.SKILLS.tituloSeccion ?? ''" [habilidades]="data.SKILLS.lista"></app-habilidades>
 
-<app-cursos [cursos]="data.COURSES.lista"></app-cursos>
+<app-cursos [tituloSeccion]="data.COURSES.tituloSeccion ?? ''" [cursos]="data.COURSES.lista"></app-cursos>
 
-<app-proyectos [proyectos]="data.PROJECTS.lista"></app-proyectos>
+<app-proyectos [tituloSeccion]="data.PROJECTS.tituloSeccion ?? ''" [proyectos]="data.PROJECTS.lista"></app-proyectos>
 
 <app-footer [datosFooter]="data.FOOTER"></app-footer>
 } @else {

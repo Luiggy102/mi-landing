@@ -14,4 +14,5 @@ import { NgxVortexComponent } from '@omnedia/ngx-vortex';
 })
 export class ProyectosComponent {
      @Input() proyectos: Proyecto[] = [];
+     @Input() tituloSeccion: string = '';
 }

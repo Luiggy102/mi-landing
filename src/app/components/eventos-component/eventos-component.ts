@@ -13,6 +13,7 @@ export class EventosComponent {
   public eventosFila1: Evento[] = [];
   public eventosFila2: Evento[] = [];
 
+  @Input() tituloSeccion: string = '';
   get eventos(): Evento[] {
     return this.eventosFila1;
   }

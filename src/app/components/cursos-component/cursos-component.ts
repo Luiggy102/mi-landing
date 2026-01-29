@@ -13,4 +13,5 @@ import { NgxFlickeringGridComponent } from '@omnedia/ngx-flickering-grid';
 })
 export class CursosComponent {
      @Input() cursos: Curso[] = [];
+     @Input() tituloSeccion: string = '';
 }
