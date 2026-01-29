@@ -3,6 +3,7 @@ import { CategoriaHabilidad } from "./categoria-habilidad.interface";
 import { Curso } from "./curso.interface";
 import { Evento } from "./evento.interface";
 import { Experiencia } from "./experiencia.interface";
+import { Footer } from "./footer.interface";
 import { Proyecto } from "./proyecto.interface";
 
 export interface PortfolioData {
@@ -12,4 +13,5 @@ export interface PortfolioData {
   PROJECTS: { tituloSeccion?: string, lista: Proyecto[] };
   COURSES: { tituloSeccion?: string, lista: Curso[] };
   EVENTS: { tituloSeccion?: string, lista: Evento[] };
+  FOOTER: Footer;
 }

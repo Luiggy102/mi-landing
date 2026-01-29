@@ -12,16 +12,15 @@
           </div>
 
           <div class="cta-content">
-               <h2 class="cta-title">¿Tienes un proyecto en mente?</h2>
+               <h2 class="cta-title">{{datosFooter!.titulo}}</h2>
                <p class="cta-subtitle">
-                    Estoy disponible para nuevas oportunidades y colaboraciones.
-                    ¡Construyamos algo increíble juntos!
+                    {{datosFooter!.descripcion}}
                </p>
 
                <div class="contact-methods">
-                    @for (red of redes; track red.nombre) {
+                    @for (red of datosFooter!.redes; track red.nombre) {
                     <a [href]="red.link" target="_blank" class="contact-card">
-                         <ng-icon [name]="red.icono" size="1.8rem"></ng-icon>
+                         <ng-icon [name]="red.pathIcono" size="1.8rem"></ng-icon>
                          <span>{{ red.nombre }}</span>
                     </a>
                     }

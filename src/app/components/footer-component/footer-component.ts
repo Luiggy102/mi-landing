@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID, inject } from '@angular/core';
 import { NgxThreeGlobeComponent } from '@omnedia/ngx-three-globe';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { bootstrapGithub, bootstrapLinkedin, bootstrapEnvelopeAtFill } from '@ng-icons/bootstrap-icons';
+import { RedSocial } from '../../interfaces/red-social.interface';
+import { Footer } from '../../interfaces/footer.interface';
 
 @Component({
      selector: 'app-footer',
@@ -14,14 +16,8 @@ import { bootstrapGithub, bootstrapLinkedin, bootstrapEnvelopeAtFill } from '@ng
      viewProviders: [provideIcons({ bootstrapGithub, bootstrapLinkedin, bootstrapEnvelopeAtFill })]
 })
 export class FooterComponent {
+     @Input() datosFooter?: Footer;
      private platformId = inject(PLATFORM_ID);
      showGlobe = isPlatformBrowser(this.platformId);
-     // Reutilizamos tus redes sociales
-     public redes = [
-          { nombre: 'Email', icono: 'bootstrapEnvelopeAtFill', link: 'mailto:work_luiggyn.h5d9a@slmail.me' },
-          { nombre: 'LinkedIn', icono: 'bootstrapLinkedin', link: 'https://www.linkedin.com/in/luidev/' },
-          // { nombre: 'GitHub', icono: 'bootstrapGithub', link: 'https://github.com/luiggy102/' },
-     ];
-
      public currentYear = new Date().getFullYear();
 }

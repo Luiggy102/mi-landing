@@ -8,6 +8,7 @@ import { HabilidadesData } from '../data/habilidades.data';
 import { ProyectosData } from '../data/proyectos.data';
 import { CursosData } from '../data/cursos.data';
 import { EventosData } from '../data/eventos.data';
+import { FooterData } from '../data/footer.data';
 
 
 @Injectable({ providedIn: 'root' })
@@ -19,6 +20,7 @@ export class DataService {
      proyectos = inject(ProyectosData)
      cursos = inject(CursosData)
      eventos = inject(EventosData)
+     footer = inject(FooterData);
 
      getPortfolioData(): Observable<PortfolioData> {
           const data: PortfolioData = {
@@ -38,6 +40,7 @@ export class DataService {
                EVENTS: {
                     lista: this.eventos.eventosData
                },
+               FOOTER: this.footer.footerData
           };
 
           return of(data);
