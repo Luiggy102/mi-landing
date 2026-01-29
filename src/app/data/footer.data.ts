@@ -18,4 +18,21 @@ export class FooterData {
           `,
           redes: this.redes
      }
+     public footerDataEN: Footer = {
+          titulo: 'Do you have a project in mind?',
+          descripcion: `
+  I’m available for new opportunities and collaborations.
+  Let’s build something amazing together!
+  `,
+          redes: this.redes
+     };
+     public footerDataDE: Footer = {
+          titulo: 'Hast du ein Projekt im Sinn?',
+          descripcion: `
+  Ich bin offen für neue Möglichkeiten und Kooperationen.
+  Lass uns gemeinsam etwas Großartiges schaffen!
+  `,
+          redes: this.redes
+     };
+
 }

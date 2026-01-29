@@ -9,11 +9,12 @@ import { ProyectosData } from '../data/proyectos.data';
 import { CursosData } from '../data/cursos.data';
 import { EventosData } from '../data/eventos.data';
 import { FooterData } from '../data/footer.data';
+import { LanguageService } from './language.service';
 
 
 @Injectable({ providedIn: 'root' })
 export class DataService {
-     // Caso datos quemados
+     private langService = inject(LanguageService);
      aboutMe = inject(AboutMeData);
      experiencia = inject(ExperienciaData);
      habilidades = inject(HabilidadesData)
@@ -23,47 +24,114 @@ export class DataService {
      footer = inject(FooterData);
 
      getPortfolioData(): Observable<PortfolioData> {
+          const lang = this.langService.language();
           const data: PortfolioData = {
-               ABOUT_ME: this.aboutMe.userData,
+               ABOUT_ME: this.getAboutData(lang),
                EXPERIENCE: {
-                    tituloSeccion: 'Mi Experiencia',
-                    lista: this.experiencia.experienciasData
+                    tituloSeccion: this.getTitle(lang, {
+                         es: 'Mi Experiencia',
+                         en: 'My Experience',
+                         de: 'Meine Erfahrung'
+                    }),
+                    lista: this.getExpData(lang)
                },
                EVENTS: {
-                    tituloSeccion: 'Eventos y Comunidad',
-                    lista: this.eventos.eventosData
+                    tituloSeccion: this.getTitle(lang, {
+                         es: 'Eventos y Comunidad',
+                         en: 'Events & Community',
+                         de: 'Events und Community'
+                    }),
+                    lista: this.getEventsData(lang)
                },
+
                SKILLS: {
-                    tituloSeccion: 'Habilidades Técnicas',
-                    lista: this.habilidades.habilidadesData
+                    tituloSeccion: this.getTitle(lang, {
+                         es: 'Habilidades Técnicas',
+                         en: 'Technical Skills',
+                         de: 'Technische Fähigkeiten'
+                    }),
+                    lista: this.getSkillsData(lang)
                },
+
                PROJECTS: {
-                    tituloSeccion: 'Proyectos Destacados',
-                    lista: this.proyectos.proyectosData
+                    tituloSeccion: this.getTitle(lang, {
+                         es: 'Proyectos Destacados',
+                         en: 'Featured Projects',
+                         de: 'Ausgewählte Projekte'
+                    }),
+                    lista: this.getProjectsData(lang)
                },
+
                COURSES: {
-                    tituloSeccion: 'Cursos y Certificaciones',
-                    lista: this.cursos.cursosData
+                    tituloSeccion: this.getTitle(lang, {
+                         es: 'Cursos y Certificaciones',
+                         en: 'Courses & Certifications',
+                         de: 'Kurse und Zertifikate'
+                    }),
+                    lista: this.getCoursesData(lang)
                },
-               FOOTER: this.footer.footerData
+
+               FOOTER: this.getFooterData(lang)
           };
 
           return of(data);
      }
+     private getAboutData(lang: string) {
+          if (lang === 'es') return this.aboutMe.userData;
+          if (lang === 'en') return this.aboutMe.userDataEN;
+          if (lang === 'de') return this.aboutMe.userDataDE;
+          return this.aboutMe.userDataEN;
+     }
 
-     // Caso AWS
-     // private readonly API_URL = '';
-     // private data$?: Observable<PortfolioData>;
+     private getExpData(lang: string) {
+          if (lang === 'es') return this.experiencia.experienciasData;
+          if (lang === 'en') return this.experiencia.experienciasDataEN;
+          if (lang === 'de') return this.experiencia.experienciasDataDE;
+          return this.experiencia.experienciasDataEN;
+     }
 
-     // constructor(private http: HttpClient) { }
 
-     // getPortfolioData(): Observable<PortfolioData> {
-     //      if (!this.data$) {
-     //           this.data$ = this.http.get<PortfolioData>(this.API_URL).pipe(
-     //                shareReplay(1)
-     //           );
-     //      }
-     //      return this.data$;
-     // }
+     private getEventsData(lang: string) {
+          if (lang === 'es') return this.eventos.eventosData;
+          if (lang === 'en') return this.eventos.eventosDataEN;
+          if (lang === 'de') return this.eventos.eventosDataDE;
+          return this.eventos.eventosDataEN;
+     }
+
+     private getSkillsData(lang: string) {
+          if (lang === 'es') return this.habilidades.habilidadesData;
+          if (lang === 'en') return this.habilidades.habilidadesDataEN;
+          if (lang === 'de') return this.habilidades.habilidadesDataDE;
+          return this.habilidades.habilidadesDataEN;
+     }
+
+     private getProjectsData(lang: string) {
+          if (lang === 'es') return this.proyectos.proyectosData;
+          if (lang === 'en') return this.proyectos.proyectosDataEN;
+          if (lang === 'de') return this.proyectos.proyectosDataDE;
+          return this.proyectos.proyectosDataEN;
+     }
+
+     private getCoursesData(lang: string) {
+          if (lang === 'es') return this.cursos.cursosData;
+          if (lang === 'en') return this.cursos.cursosDataEN;
+          if (lang === 'de') return this.cursos.cursosDataDE;
+          return this.cursos.cursosDataEN;
+     }
+
+     private getFooterData(lang: string) {
+          if (lang === 'es') return this.footer.footerData;
+          if (lang === 'en') return this.footer.footerDataEN;
+          if (lang === 'de') return this.footer.footerDataDE;
+          return this.footer.footerDataEN;
+     }
+
+     private getTitle(
+          lang: string,
+          titles: { es: string; en: string; de: string }
+     ): string {
+          return titles[lang as 'es' | 'en' | 'de'] ?? titles.en;
+     }
+
 
 }

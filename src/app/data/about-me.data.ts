@@ -19,4 +19,30 @@ export class AboutMeData {
     ]
   };
 
+  public userDataEN: AcercaDeMi = {
+    titulo: 'Fullstack Developer & Solutions Architect',
+    descripcion: `
+  Hi, I’m passionate about building robust and scalable systems. I specialize in transforming complex ideas into functional and engaging applications, mastering technologies across both Frontend and Backend.
+  `,
+    miFoto: 'assets/img/pfpSinFondo.webp',
+    contactoRedes: [
+      { nombre: 'GitHub', pathIcono: 'bootstrapGithub', link: 'https://github.com/luiggy102/' },
+      { nombre: 'LinkedIn', pathIcono: 'bootstrapLinkedin', link: 'https://www.linkedin.com/in/luidev/' },
+      { nombre: 'Email', pathIcono: 'bootstrapEnvelopeAtFill', link: 'mailto:work_luiggyn.h5d9a@slmail.me' }
+    ]
+  };
+
+  public userDataDE: AcercaDeMi = {
+    titulo: 'Fullstack-Entwickler & Lösungsarchitekt',
+    descripcion: `
+  Hallo, ich brenne dafür, robuste und skalierbare Systeme zu entwickeln. Ich spezialisiere mich darauf, komplexe Ideen in funktionale und ansprechende Anwendungen zu verwandeln und beherrsche Technologien sowohl im Frontend als auch im Backend.
+  `,
+    miFoto: 'assets/img/pfpSinFondo.webp',
+    contactoRedes: [
+      { nombre: 'GitHub', pathIcono: 'bootstrapGithub', link: 'https://github.com/luiggy102/' },
+      { nombre: 'LinkedIn', pathIcono: 'bootstrapLinkedin', link: 'https://www.linkedin.com/in/luidev/' },
+      { nombre: 'Email', pathIcono: 'bootstrapEnvelopeAtFill', link: 'mailto:work_luiggyn.h5d9a@slmail.me' }
+    ]
+  };
+
 }

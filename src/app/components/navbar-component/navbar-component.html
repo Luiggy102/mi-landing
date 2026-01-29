@@ -1,23 +1,53 @@
 <header class="navbar-container">
      <nav class="navbar">
-          <!-- <div class="logo">
-               <span>&lt;Dev /&gt;</span>
-          </div> -->
 
-          <button class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
-               <span></span>
-               <span></span>
-               <span></span>
-          </button>
+          <!-- IZQUIERDA: CV -->
+          <div class="nav-left">
+               <button class="cv-btn" (click)="downloadCV()">
+                    <!-- {{ currentLabels.cv }} -->
+                    <span class="soon">CV</span>
+               </button>
+          </div>
 
+          <!-- CENTRO: LINKS -->
           <ul class="nav-links" [class.active]="isMenuOpen">
-               <li><a href="#acerca-de" (click)="closeMenu()">Acerca de mí</a></li>
-               <li><a href="#eventos" (click)="closeMenu()">Eventos</a></li>
-               <li><a href="#experiencia" (click)="closeMenu()">Experiencia</a></li>
-               <li><a href="#habilidades" (click)="closeMenu()">Habilidades</a></li>
-               <li><a href="#cursos" (click)="closeMenu()">Cursos</a></li>
-               <li><a href="#proyectos" (click)="closeMenu()">Proyectos</a></li>
-               <li><a href="#contacto" (click)="closeMenu()">Contacto</a></li>
+               <li><a href="#acerca-de" (click)="closeMenu()">{{ currentLabels.about }}</a></li>
+               <li><a href="#eventos" (click)="closeMenu()">{{ currentLabels.events }}</a></li>
+               <li><a href="#experiencia" (click)="closeMenu()">{{ currentLabels.exp }}</a></li>
+               <li><a href="#habilidades" (click)="closeMenu()">{{ currentLabels.skills }}</a></li>
+               <li><a href="#cursos" (click)="closeMenu()">{{ currentLabels.courses }}</a></li>
+               <li><a href="#proyectos" (click)="closeMenu()">{{ currentLabels.projects }}</a></li>
+               <li><a href="#contacto" (click)="closeMenu()">{{ currentLabels.contact }}</a></li>
           </ul>
+
+          <!-- DERECHA: IDIOMAS -->
+          <div class="nav-right">
+               <div class="lang-dropdown">
+                    <button class="lang-btn" (click)="toggleLang()">
+                         <ng-icon [name]="langService.language() === 'es' ? 'flagEs' :
+                    langService.language() === 'en' ? 'flagUs' : 'flagDe'" size="1.2rem">
+                         </ng-icon>
+                    </button>
+
+                    <div class="lang-menu" *ngIf="isLangOpen">
+                         <button (click)="changeLang('es')">
+                              <ng-icon name="flagEs"></ng-icon> ES
+                         </button>
+                         <button (click)="changeLang('en')">
+                              <ng-icon name="flagUs"></ng-icon> EN
+                         </button>
+                         <button (click)="changeLang('de')">
+                              <ng-icon name="flagDe"></ng-icon> DE
+                         </button>
+                    </div>
+               </div>
+
+               <button class="hamburger" (click)="toggleMenu()" [class.active]="isMenuOpen">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+               </button>
+          </div>
+
      </nav>
 </header>

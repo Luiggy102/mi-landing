@@ -1,6 +1,7 @@
 export interface Curso {
      nombreCurso: string;
      pathIcono: string;
-     estado: 'Certificado' | 'En Curso';
+     // estado: 'Certificado' | 'En Curso';
+     estado: string;
      enlaceCertificacion?: string;
 }

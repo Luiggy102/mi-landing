@@ -53,5 +53,97 @@ export class ProyectosData {
     },
 
   ];
+  public proyectosDataEN: Proyecto[] = [
+    {
+      nombreProyecto: 'Cloud-Native Portfolio',
+      imagenPreview: 'assets/img/imagenPortafolio.webp',
+      descripcionProyecto: `
+    High-performance professional landing page designed with a 100% cloud-based architecture. Built with Angular, the infrastructure leverages Amazon S3 for storage and CloudFront as a global CDN for low-latency delivery.
+    `,
+      links: [
+        { pathIcono: 'bootstrapGlobe2', link: 'https://luitamayo.com' },
+        { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/mi-landing/' }
+      ],
+      tecnologias: [
+        { nombre: 'Angular', pathIcono: 'ionLogoAngular' },
+        { nombre: 'AWS', pathIcono: 'tablerBrandAws' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
+      ]
+    },
+    {
+      nombreProyecto: 'Upgit',
+      imagenPreview: 'assets/img/imagenUpgit.webp',
+      descripcionProyecto: `
+    CLI tool to monitor multiple Git and GitHub repositories simultaneously and pull changes concurrently when available.
+    `,
+      links: [
+        { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/upgit' }
+      ],
+      tecnologias: [
+        { nombre: 'Golang', pathIcono: 'tablerBrandGolang' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
+      ]
+    },
+    {
+      nombreProyecto: 'Ligapro-cli',
+      imagenPreview: 'assets/img/imagenLigaProCli.webp',
+      descripcionProyecto: `
+    CLI web scraper to stay up to date with Ecuador’s LigaPro Serie A.
+    `,
+      links: [
+        { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/ligapro-cli' }
+      ],
+      tecnologias: [
+        { nombre: 'Golang', pathIcono: 'tablerBrandGolang' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
+      ]
+    },
+  ];
+  public proyectosDataDE: Proyecto[] = [
+    {
+      nombreProyecto: 'Cloud-Native Portfolio',
+      imagenPreview: 'assets/img/imagenPortafolio.webp',
+      descripcionProyecto: `
+    Leistungsstarke professionelle Landingpage mit einer vollständig cloudbasierten Architektur. Implementiert mit Angular, nutzt die Infrastruktur Amazon S3 für die Speicherung und CloudFront als globales CDN für geringe Latenz.
+    `,
+      links: [
+        { pathIcono: 'bootstrapGlobe2', link: 'https://luitamayo.com' },
+        { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/mi-landing/' }
+      ],
+      tecnologias: [
+        { nombre: 'Angular', pathIcono: 'ionLogoAngular' },
+        { nombre: 'AWS', pathIcono: 'tablerBrandAws' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
+      ]
+    },
+    {
+      nombreProyecto: 'Upgit',
+      imagenPreview: 'assets/img/imagenUpgit.webp',
+      descripcionProyecto: `
+    CLI-Tool zur Überwachung mehrerer Git- und GitHub-Repositories sowie zum gleichzeitigen Abrufen von Änderungen.
+    `,
+      links: [
+        { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/upgit' }
+      ],
+      tecnologias: [
+        { nombre: 'Golang', pathIcono: 'tablerBrandGolang' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
+      ]
+    },
+    {
+      nombreProyecto: 'Ligapro-cli',
+      imagenPreview: 'assets/img/imagenLigaProCli.webp',
+      descripcionProyecto: `
+    CLI-Web-Scraper zur Verfolgung der ecuadorianischen LigaPro Serie A.
+    `,
+      links: [
+        { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/ligapro-cli' }
+      ],
+      tecnologias: [
+        { nombre: 'Golang', pathIcono: 'tablerBrandGolang' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
+      ]
+    },
+  ];
 
 }

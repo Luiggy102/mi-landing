@@ -52,4 +52,95 @@ export class HabilidadesData {
     },
   ];
 
+  public habilidadesDataEN: CategoriaHabilidad[] = [
+    {
+      nombreCategoria: 'Frontend',
+      tecnologias: [
+        { nombre: 'Angular', pathIcono: 'ionLogoAngular' },
+        { nombre: 'React', pathIcono: 'ionLogoReact' },
+      ]
+    },
+    {
+      nombreCategoria: 'Backend',
+      tecnologias: [
+        { nombre: 'ASP.NET Core', pathIcono: 'simpleDotnet' },
+        { nombre: 'Laravel', pathIcono: 'ionLogoLaravel' },
+      ]
+    },
+    {
+      nombreCategoria: 'Databases',
+      tecnologias: [
+        { nombre: 'SQL Server', pathIcono: 'bootstrapDatabase' },
+        { nombre: 'MySQL', pathIcono: 'simpleMysql' },
+        { nombre: 'MongoDB', pathIcono: 'simpleMongodb' },
+        { nombre: 'PostgreSQL', pathIcono: 'simplePostgresql' },
+      ]
+    },
+    {
+      nombreCategoria: 'Languages',
+      tecnologias: [
+        { nombre: 'C#', pathIcono: 'tablerBrandCSharp' },
+        { nombre: 'Golang', pathIcono: 'tablerBrandGolang' },
+        { nombre: 'PHP', pathIcono: 'simplePhp' },
+        { nombre: 'TypeScript', pathIcono: 'simpleTypescript' },
+        { nombre: 'JavaScript', pathIcono: 'simpleJavascript' },
+      ]
+    },
+    {
+      nombreCategoria: 'Tools & Cloud',
+      tecnologias: [
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
+        { nombre: 'AWS', pathIcono: 'tablerBrandAws' },
+        { nombre: 'Docker', pathIcono: 'ionLogoDocker' },
+        { nombre: 'Postman', pathIcono: 'simplePostman' },
+        { nombre: 'Linux', pathIcono: 'simpleLinux' },
+      ]
+    },
+  ];
+  public habilidadesDataDE: CategoriaHabilidad[] = [
+    {
+      nombreCategoria: 'Frontend',
+      tecnologias: [
+        { nombre: 'Angular', pathIcono: 'ionLogoAngular' },
+        { nombre: 'React', pathIcono: 'ionLogoReact' },
+      ]
+    },
+    {
+      nombreCategoria: 'Backend',
+      tecnologias: [
+        { nombre: 'ASP.NET Core', pathIcono: 'simpleDotnet' },
+        { nombre: 'Laravel', pathIcono: 'ionLogoLaravel' },
+      ]
+    },
+    {
+      nombreCategoria: 'Datenbanken',
+      tecnologias: [
+        { nombre: 'SQL Server', pathIcono: 'bootstrapDatabase' },
+        { nombre: 'MySQL', pathIcono: 'simpleMysql' },
+        { nombre: 'MongoDB', pathIcono: 'simpleMongodb' },
+        { nombre: 'PostgreSQL', pathIcono: 'simplePostgresql' },
+      ]
+    },
+    {
+      nombreCategoria: 'Programmiersprachen',
+      tecnologias: [
+        { nombre: 'C#', pathIcono: 'tablerBrandCSharp' },
+        { nombre: 'Golang', pathIcono: 'tablerBrandGolang' },
+        { nombre: 'PHP', pathIcono: 'simplePhp' },
+        { nombre: 'TypeScript', pathIcono: 'simpleTypescript' },
+        { nombre: 'JavaScript', pathIcono: 'simpleJavascript' },
+      ]
+    },
+    {
+      nombreCategoria: 'Tools & Cloud',
+      tecnologias: [
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
+        { nombre: 'AWS', pathIcono: 'tablerBrandAws' },
+        { nombre: 'Docker', pathIcono: 'ionLogoDocker' },
+        { nombre: 'Postman', pathIcono: 'simplePostman' },
+        { nombre: 'Linux', pathIcono: 'simpleLinux' },
+      ]
+    },
+  ];
+
 }
