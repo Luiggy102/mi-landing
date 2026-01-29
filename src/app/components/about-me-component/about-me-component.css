@@ -1,35 +1,46 @@
 .about-section {
   position: relative;
-  width: 100%; /* Cambiado de 100vw a 100% para evitar desbordamiento */
-  min-height: 100vh;
+  width: 100%;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 100px 20px; /* Padding suficiente para la navbar */
+  padding: 100px 20px;
   background-color: #0a0a0a;
   box-sizing: border-box;
+  background: transparent;
 }
 
-/* Partículas fijas al fondo */
 ngx-particles {
   position: absolute;
+  inset: 0;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
+  width: 100% !important;
+  height: 100% !important;
   z-index: 1;
+  pointer-events: none;
+}
+
+::ng-deep ngx-particles canvas {
+ position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .content-wrapper {
   position: relative;
   z-index: 2;
   display: flex;
-  flex-direction: row; /* Desktop por defecto */
+  flex-direction: row;
   align-items: center;
   gap: 3rem;
   max-width: 1100px;
-  width: 95%; /* Ajuste para no pegar a los bordes */
+  width: 95%;
   padding: 3rem;
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(12px);
@@ -40,7 +51,7 @@ ngx-particles {
 }
 
 .photo-container {
-  flex-shrink: 0; /* Evita que la foto se encoja */
+  flex-shrink: 0;
 }
 
 .photo-frame {
@@ -64,31 +75,22 @@ ngx-particles {
   text-align: left;
 }
 
-/* Quitamos el gradiente del h1 para que no haya conflicto */
 .title {
   font-size: clamp(1.8rem, 5vw, 2.8rem);
   font-weight: 800;
   line-height: 1.2;
   background: none; 
 
-/* color: #f0faff;
-  text-shadow: 0 0 12px rgba(255, 255, 255, 0.4), 
-               0 0 20px rgba(0, 210, 255, 0.2); */
-
 color: #e0f7ff; 
   text-shadow: 0 0 10px rgba(224, 247, 255, 0.5);
 
-  /* color: #ffffff;
-  text-shadow: 0 0 8px rgba(0, 210, 255, 0.3); */
 }
 
-/* Forzamos el gradiente al elemento interno que usa la styleClass */
 ::ng-deep .gradient-text {
   background: linear-gradient(90deg, #ffffff, #00d2ff) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   
-  /* Esto es vital para Chrome */
   color: transparent !important;
   -webkit-text-fill-color: transparent !important;
   
@@ -96,7 +98,6 @@ color: #e0f7ff;
   margin: 0;
 }
 
-/* Aseguramos que el cursor no desaparezca por el transparente */
 ::ng-deep .om-typewriter-cursor {
   -webkit-text-fill-color: currentColor !important;
 }
@@ -127,14 +128,25 @@ color: #e0f7ff;
   opacity: 1;
 }
 
-/* --- RESPONSIVO PARA MÓVILES --- */
 @media (max-width: 850px) {
+ .about-section {
+    min-height: 100svh;
+    padding: 80px 15px;
+  }
+
   .content-wrapper {
-    flex-direction: column; /* Apila foto arriba y texto abajo */
+    flex-direction: column;
     text-align: center;
-    padding: 2rem;
+padding: 2rem 1.5rem;
     gap: 2rem;
     margin-top: 20px;
+
+background: rgba(255, 255, 255, 0.008);
+backdrop-filter: blur(4px);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+
   }
 
   .info-container {

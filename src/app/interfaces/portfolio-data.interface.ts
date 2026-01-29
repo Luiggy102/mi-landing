@@ -7,9 +7,9 @@ import { Proyecto } from "./proyecto.interface";
 
 export interface PortfolioData {
   ABOUT_ME: AcercaDeMi;
-  EXPERIENCE: { lista: Experiencia[] };
-  SKILLS: { lista: CategoriaHabilidad[] };
-  PROJECTS: { lista: Proyecto[] };
-  COURSES: { lista: Curso[] };
-  EVENTS: { lista: Evento[] };
+  EXPERIENCE: { tituloSeccion?: string, lista: Experiencia[] };
+  SKILLS: { tituloSeccion?: string, lista: CategoriaHabilidad[] };
+  PROJECTS: { tituloSeccion?: string, lista: Proyecto[] };
+  COURSES: { tituloSeccion?: string, lista: Curso[] };
+  EVENTS: { tituloSeccion?: string, lista: Evento[] };
 }
