@@ -71,18 +71,17 @@ export class NavbarComponent {
     const lang = this.langService.language();
 
     const cvMap: Record<Language, string> = {
-      es: 'assets/pdf/cvES.pdf',
-      en: 'assets/pdf/cvEN.pdf',
-      de: 'assets/pdf/cvDE.pdf'
+      es: 'assets/pdf/cv-es.pdf',
+      en: 'assets/pdf/cv-en.pdf',
+      de: 'assets/pdf/cv-de.pdf'
     };
 
     const fileUrl = cvMap[lang];
-    const fileName = `CV-${lang.toUpperCase()}.pdf`;
 
     const link = document.createElement('a');
     link.href = fileUrl;
-    link.download = fileName;
     link.target = '_blank';
+    link.rel = 'noopener noreferrer';
 
     document.body.appendChild(link);
     link.click();
