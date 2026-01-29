@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://luitamayo.com/sitemap.xml

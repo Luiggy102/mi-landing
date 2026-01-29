@@ -3,8 +3,8 @@
   box-sizing: border-box;
 }
 
-html, body { height: 100%; overflow-x: hidden; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { height: 100%; overflow-x: hidden; background-color: #000000ff; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  }
 html {
   scroll-behavior: smooth;
 }
