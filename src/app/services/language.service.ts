@@ -1,6 +1,7 @@
 import { Injectable, signal } from '@angular/core';
 
-export type Language = 'es' | 'en' | 'de';
+// export type Language = 'es' | 'en' | 'de';
+export type Language = 'es' | 'en';
 
 @Injectable({ providedIn: 'root' })
 export class LanguageService {
@@ -21,7 +22,7 @@ export class LanguageService {
 
           const browserLang = window.navigator.language.split('-')[0];
           if (browserLang === 'es') return 'es';
-          if (browserLang === 'de') return 'de';
+          // if (browserLang === 'de') return 'de';
 
           return 'en'; // Default
      }

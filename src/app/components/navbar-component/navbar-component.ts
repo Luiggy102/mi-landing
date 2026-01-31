@@ -73,7 +73,7 @@ export class NavbarComponent {
     const cvMap: Record<Language, string> = {
       es: 'assets/pdf/cv-es.pdf',
       en: 'assets/pdf/cv-en.pdf',
-      de: 'assets/pdf/cv-de.pdf'
+      // de: 'assets/pdf/cv-de.pdf'
     };
 
     const fileUrl = cvMap[lang];
