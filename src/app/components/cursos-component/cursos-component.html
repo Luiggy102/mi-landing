@@ -9,7 +9,7 @@
       <div class="course-card">
 
         <div class="badge-container">
-          @if (curso.estado === 'Certificado' && curso.enlaceCertificacion) {
+          @if (curso.estaCompletado && curso.enlaceCertificacion) {
           <a [href]="curso.enlaceCertificacion" target="_blank" class="badge-link" title="Ver certificación">
             <img [src]="curso.pathIcono" [alt]="curso.nombreCurso" class="badge-img clickable">
           </a>
@@ -21,7 +21,7 @@
         <div class="course-info">
           <h3 class="course-name">{{ curso.nombreCurso }}</h3>
           <span class="status-label"
-            [ngClass]="{'en-curso': curso.estado === 'En Curso', 'certificado': curso.estado === 'Certificado'}">
+            [ngClass]="{'en-curso': !curso.estaCompletado , 'certificado': curso.estaCompletado}">
             {{ curso.estado }}
           </span>
         </div>
