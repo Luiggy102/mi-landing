@@ -8,6 +8,22 @@ export class ProyectosData {
 
   public proyectosData: Proyecto[] = [
     {
+      nombreProyecto: 'Uni-Temp',
+      imagenPreview: 'assets/img/imagenUniTemp.webp',
+      descripcionProyecto: `
+      Plataforma universitaria de gestión y analítica de temperatura en aulas desarrollada en Laravel bajo una arquitectura desacoplada en AWS. El sistema emplea Amazon SQS, AWS Lambda (Node.js) y DynamoDB para el procesamiento asíncrono de datos.
+      `,
+      links: [
+        { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/uni-temp/' }
+      ],
+      tecnologias: [
+        { nombre: 'Laravel', pathIcono: 'ionLogoLaravel' },
+        { nombre: 'Node.js', pathIcono: 'ionLogoNodejs' },
+        { nombre: 'AWS', pathIcono: 'tablerBrandAws' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
+      ]
+    },
+    {
       nombreProyecto: 'Portafolio Cloud-Native',
       imagenPreview: 'assets/img/imagenPortafolio.webp',
       descripcionProyecto: `
@@ -55,6 +71,22 @@ export class ProyectosData {
   ];
   public proyectosDataEN: Proyecto[] = [
     {
+      nombreProyecto: 'Uni-Temp',
+      imagenPreview: 'assets/img/imagenUniTemp.webp',
+      descripcionProyecto: `
+      University platform for classroom temperature management and analytics developed in Laravel using a decoupled AWS architecture. The system utilizes Amazon SQS, AWS Lambda (Node.js), and DynamoDB for asynchronous data processing.
+      `,
+      links: [
+        { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/uni-temp/' }
+      ],
+      tecnologias: [
+        { nombre: 'Laravel', pathIcono: 'ionLogoLaravel' },
+        { nombre: 'Node.js', pathIcono: 'ionLogoNodejs' },
+        { nombre: 'AWS', pathIcono: 'tablerBrandAws' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
+      ]
+    },
+    {
       nombreProyecto: 'Cloud-Native Portfolio',
       imagenPreview: 'assets/img/imagenPortafolio.webp',
       descripcionProyecto: `
@@ -100,6 +132,22 @@ export class ProyectosData {
     },
   ];
   public proyectosDataDE: Proyecto[] = [
+    {
+      nombreProyecto: 'Uni-Temp',
+      imagenPreview: 'assets/img/imagenUniTemp.webp',
+      descripcionProyecto: `
+      Universitäre Plattform für Management und Analyse von Raumtemperaturen, entwickelt in Laravel auf Basis einer entkoppelten AWS-Architektur. Das System verwendet Amazon SQS, AWS Lambda (Node.js) und DynamoDB für die asynchrone Datenverarbeitung.
+      `,
+      links: [
+        { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/uni-temp/' }
+      ],
+      tecnologias: [
+        { nombre: 'Laravel', pathIcono: 'ionLogoLaravel' },
+        { nombre: 'Node.js', pathIcono: 'ionLogoNodejs' },
+        { nombre: 'AWS', pathIcono: 'tablerBrandAws' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
+      ]
+    },
     {
       nombreProyecto: 'Cloud-Native Portfolio',
       imagenPreview: 'assets/img/imagenPortafolio.webp',

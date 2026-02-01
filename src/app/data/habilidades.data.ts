@@ -12,6 +12,7 @@ export class HabilidadesData {
       tecnologias: [
         { nombre: 'Angular', pathIcono: 'ionLogoAngular' },
         { nombre: 'React', pathIcono: 'ionLogoReact' },
+        { nombre: 'Bootstrap', pathIcono: 'tablerBrandBootstrap' },
       ]
     },
     {
@@ -19,6 +20,7 @@ export class HabilidadesData {
       tecnologias: [
         { nombre: 'ASP.NET Core', pathIcono: 'simpleDotnet' },
         { nombre: 'Laravel', pathIcono: 'ionLogoLaravel' },
+        { nombre: 'Node.js', pathIcono: 'ionLogoNodejs' },
       ]
     },
     {
@@ -43,10 +45,10 @@ export class HabilidadesData {
     {
       nombreCategoria: 'Herramientas & Cloud',
       tecnologias: [
-        { nombre: 'Git', pathIcono: 'ionGitBranch' },
         { nombre: 'AWS', pathIcono: 'tablerBrandAws' },
         { nombre: 'Docker', pathIcono: 'ionLogoDocker' },
         { nombre: 'Postman', pathIcono: 'simplePostman' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
         { nombre: 'Linux', pathIcono: 'simpleLinux' },
       ]
     },
@@ -58,6 +60,7 @@ export class HabilidadesData {
       tecnologias: [
         { nombre: 'Angular', pathIcono: 'ionLogoAngular' },
         { nombre: 'React', pathIcono: 'ionLogoReact' },
+        { nombre: 'Bootstrap', pathIcono: 'tablerBrandBootstrap' },
       ]
     },
     {
@@ -65,6 +68,7 @@ export class HabilidadesData {
       tecnologias: [
         { nombre: 'ASP.NET Core', pathIcono: 'simpleDotnet' },
         { nombre: 'Laravel', pathIcono: 'ionLogoLaravel' },
+        { nombre: 'Node.js', pathIcono: 'ionLogoNodejs' },
       ]
     },
     {
@@ -89,10 +93,10 @@ export class HabilidadesData {
     {
       nombreCategoria: 'Tools & Cloud',
       tecnologias: [
-        { nombre: 'Git', pathIcono: 'ionGitBranch' },
         { nombre: 'AWS', pathIcono: 'tablerBrandAws' },
         { nombre: 'Docker', pathIcono: 'ionLogoDocker' },
         { nombre: 'Postman', pathIcono: 'simplePostman' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
         { nombre: 'Linux', pathIcono: 'simpleLinux' },
       ]
     },
@@ -103,6 +107,7 @@ export class HabilidadesData {
       tecnologias: [
         { nombre: 'Angular', pathIcono: 'ionLogoAngular' },
         { nombre: 'React', pathIcono: 'ionLogoReact' },
+        { nombre: 'Bootstrap', pathIcono: 'tablerBrandBootstrap' },
       ]
     },
     {
@@ -110,6 +115,7 @@ export class HabilidadesData {
       tecnologias: [
         { nombre: 'ASP.NET Core', pathIcono: 'simpleDotnet' },
         { nombre: 'Laravel', pathIcono: 'ionLogoLaravel' },
+        { nombre: 'Node.js', pathIcono: 'ionLogoNodejs' },
       ]
     },
     {
@@ -134,10 +140,10 @@ export class HabilidadesData {
     {
       nombreCategoria: 'Tools & Cloud',
       tecnologias: [
-        { nombre: 'Git', pathIcono: 'ionGitBranch' },
         { nombre: 'AWS', pathIcono: 'tablerBrandAws' },
         { nombre: 'Docker', pathIcono: 'ionLogoDocker' },
         { nombre: 'Postman', pathIcono: 'simplePostman' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
         { nombre: 'Linux', pathIcono: 'simpleLinux' },
       ]
     },

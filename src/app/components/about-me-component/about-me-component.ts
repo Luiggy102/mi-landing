@@ -61,7 +61,7 @@ export class AboutMeComponent {
           mode: "repulse"
         },
         onHover: {
-          enable: true,
+          enable: false,
           mode: "repulse",
           parallax: {
             enable: false,
