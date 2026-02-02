@@ -1,59 +1,72 @@
-# MiLanding
+# Portfolio Front-end 
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
+Este proyecto es mi landing page profesional desarrollada con **Angular**, diseñada para ser una plataforma de alto rendimiento, escalable y multi-idioma. La arquitectura se centra en la eficiencia del renderizado y una experiencia de usuario fluida mediante el uso de tecnologías modernas del ecosistema Angular.
 
-## Development server
+## 🚀 Características Principales
 
-To start a local development server, run:
+* **Detección de Cambios OnPush**: Optimización del ciclo de vida de los componentes para minimizar las verificaciones de cambios y maximizar el rendimiento.
+* **Arquitectura Orientada a Datos**: Separación total entre la lógica de presentación y el almacenamiento de datos mediante un `DataService` y proveedores de datos inyectables (`DataMap` pattern).
+* **UI Dinámica**:
+* Integración de **Angular Icons (ng-icons)** para un manejo eficiente de recursos SVG.
+* Componentes interactivos de terceros como `ngx-particles` y `ngx-marquee`.
+* Optimización de recursos visuales mediante formatos de próxima generación (**WebP**).
 
+## 🛠️ Stack Tecnológico
+
+* **Framework**: Angular 21
+* **Lenguaje**: TypeScript
+* **Estilos**: CSS3 con metodologías modernas (Flexbox, Grid, Custom Properties)
+* **Librerías Clave**:
+* `@ng-icons/core` (Bootstrap, Simple Icons, Flag Icons)
+* `ngx-particles`
+* `rxjs` para flujos de datos asíncronos
+
+
+
+## 📂 Estructura del Proyecto
+
+```text
+src/
+├── app/
+│   ├── components/       # Componentes modulares (About, Projects, etc.)
+│   ├── data/             # Proveedores de datos e interfaces (DataMap pattern)
+│   └── services/         # Lógica de negocio (LanguageService, DataService)
+```
+
+## ⚙️ Instalación y Desarrollo
+
+1. **Clonar el repositorio**:
+```bash
+git clone https://github.com/tu-usuario/nombre-del-repo.git
+
+```
+
+
+2. **Instalar dependencias**:
+```bash
+npm install
+
+```
+
+
+3. **Ejecutar servidor local**:
 ```bash
 ng serve
+
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+Accede a `http://localhost:4200/` en tu navegador.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📦 Build para Producción
+
+Para generar una versión optimizada para hosting estático:
 
 ```bash
-ng generate component component-name
+ng build --configuration production
+
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Los archivos resultantes se encontrarán en la carpeta `dist/`.
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
