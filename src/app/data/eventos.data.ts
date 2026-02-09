@@ -11,6 +11,7 @@ export class EventosData {
     { nombreEvento: 'Google Dev Fest 2025', pathImagen: 'assets/img/googledevfest2025.webp' },
     { nombreEvento: 'Festival Latinoamericano de Instalación de Software Libre 2025', pathImagen: 'assets/img/flisol2025.webp' },
     { nombreEvento: 'Polkadot Web3 Meetup 2025', pathImagen: 'assets/img/polkadotmeetup2025.webp' },
+    { nombreEvento: 'AWS Security Day Ecuador 2026', pathImagen: 'assets/img/awssecurityday.webp' },
   ];
 
   public eventosDataEN: Evento[] = [
@@ -18,6 +19,7 @@ export class EventosData {
     { nombreEvento: 'Google DevFest 2025', pathImagen: 'assets/img/googledevfest2025.webp' },
     { nombreEvento: 'Latin American Free Software Installation Festival 2025', pathImagen: 'assets/img/flisol2025.webp' },
     { nombreEvento: 'Polkadot Web3 Meetup 2025', pathImagen: 'assets/img/polkadotmeetup2025.webp' },
+    { nombreEvento: 'AWS Security Day Ecuador 2026', pathImagen: 'assets/img/awssecurityday.webp' },
   ];
 
   public eventosDataDE: Evento[] = [
@@ -25,6 +27,7 @@ export class EventosData {
     { nombreEvento: 'Google DevFest 2025', pathImagen: 'assets/img/googledevfest2025.webp' },
     { nombreEvento: 'Lateinamerikanisches Festival zur Installation Freier Software 2025', pathImagen: 'assets/img/flisol2025.webp' },
     { nombreEvento: 'Polkadot Web3 Meetup 2025', pathImagen: 'assets/img/polkadotmeetup2025.webp' },
+    { nombreEvento: 'AWS Security Day Ecuador 2026', pathImagen: 'assets/img/awssecurityday.webp' },
   ];
 
 

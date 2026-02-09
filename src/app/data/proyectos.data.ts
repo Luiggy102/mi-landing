@@ -67,6 +67,20 @@ export class ProyectosData {
         { nombre: 'Git', pathIcono: 'ionGitBranch' },
       ]
     },
+    {
+      nombreProyecto: 'south-american-qualifiers-cli',
+      imagenPreview: 'assets/img/imagenSouth-american-qualifiers-cli.webp',
+      descripcionProyecto: `
+        Programa CLI para estar al tanto de las eliminatorias sudamericanas para la Copa Mundial de la FIFA 2026 usando API externa para datos. 
+      `,
+      links: [
+        { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/south-american-qualifiers-cli' }
+      ],
+      tecnologias: [
+        { nombre: 'Golang', pathIcono: 'tablerBrandGolang' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
+      ]
+    },
 
   ];
   public proyectosDataEN: Proyecto[] = [
@@ -130,6 +144,20 @@ export class ProyectosData {
         { nombre: 'Git', pathIcono: 'ionGitBranch' },
       ]
     },
+    {
+      nombreProyecto: 'south-american-qualifiers-cli',
+      imagenPreview: 'assets/img/imagenSouth-american-qualifiers-cli.webp',
+      descripcionProyecto: `
+        CLI program to keep track of the South American qualifiers for the 2026 FIFA World Cup using external API for data. 
+      `,
+      links: [
+        { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/south-american-qualifiers-cli' }
+      ],
+      tecnologias: [
+        { nombre: 'Golang', pathIcono: 'tablerBrandGolang' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
+      ]
+    },
   ];
   public proyectosDataDE: Proyecto[] = [
     {
@@ -186,6 +214,20 @@ export class ProyectosData {
     `,
       links: [
         { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/ligapro-cli' }
+      ],
+      tecnologias: [
+        { nombre: 'Golang', pathIcono: 'tablerBrandGolang' },
+        { nombre: 'Git', pathIcono: 'ionGitBranch' },
+      ]
+    },
+    {
+      nombreProyecto: 'south-american-qualifiers-cli',
+      imagenPreview: 'assets/img/imagenSouth-american-qualifiers-cli.webp',
+      descripcionProyecto: `
+    CLI-Programm, um über die südamerikanischen Qualifikationsspiele für die FIFA-Weltmeisterschaft 2026 auf dem Laufenden zu bleiben, unter Verwendung einer externen API für Daten. 
+      `,
+      links: [
+        { pathIcono: 'bootstrapGithub', link: 'https://github.com/Luiggy102/south-american-qualifiers-cli' }
       ],
       tecnologias: [
         { nombre: 'Golang', pathIcono: 'tablerBrandGolang' },
