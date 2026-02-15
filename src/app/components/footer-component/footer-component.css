@@ -86,7 +86,8 @@
 /* --- RESPONSIVO --- */
 @media (max-width: 900px) {
   .footer-container {
-    flex-direction: column-reverse; /* El texto arriba, el mundo abajo */
+    flex-direction: column-reverse;
+    /* El texto arriba, el mundo abajo */
     text-align: center;
     gap: 2rem;
   }

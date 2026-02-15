@@ -1,34 +1,38 @@
 .navbar-container {
-position: fixed;
+  position: fixed;
   /* top: 20px;  */
   left: 50%;
-  transform: translateX(-50%); /* Centrado perfecto */
-  width: 95%; /* Ocupa casi todo el ancho en móviles */
-  max-width: 1000px; /* Ancho máximo en pantallas grandes */
+  transform: translateX(-50%);
+  /* Centrado perfecto */
+  width: 95%;
+  /* Ocupa casi todo el ancho en móviles */
+  max-width: 1000px;
+  /* Ancho máximo en pantallas grandes */
   z-index: 1000;
   display: flex;
   justify-content: center;
-  transition: all 0.3s ease; /* Para efectos suaves al hacer scroll */
+  transition: all 0.3s ease;
+  /* Para efectos suaves al hacer scroll */
 
 }
 
 .navbar {
-display: flex;
+  display: flex;
   /* justify-content: space-around; */
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 0.8rem 2.5rem;
-  
+
   /* Forma de Píldora */
-  border-radius: 0px 0px 25px 25px; 
-  
+  border-radius: 0px 0px 25px 25px;
+
   /* Glassmorphism Refinado */
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  
+
   /* Sombra para dar profundidad */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 
@@ -49,7 +53,7 @@ display: flex;
 
 .cv-btn {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
   font-size: 0.8rem;
   padding: 0.4rem 0.9rem;
@@ -108,7 +112,7 @@ display: flex;
   position: absolute;
   top: 130%;
   right: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   backdrop-filter: blur(15px);
   border-radius: 14px;
   padding: 0.6rem;
@@ -130,7 +134,7 @@ display: flex;
 }
 
 .lang-menu button:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
 }
 
@@ -149,50 +153,86 @@ display: flex;
   width: 25px;
   height: 2px;
   background-color: #fff;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+  transform-origin: center;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
-
-.navbar-container {
-position: fixed;
-  width: 100%; /* Ocupa casi todo el ancho en móviles */
-
-}
-
-.navbar {
-    justify-content: flex-end; 
-  border-radius: 0px; 
+  .navbar-container {
+    position: fixed;
+    width: 100%;
+    z-index: 2000;
   }
 
- /* opcional: CV oculto en mobile */
+  .navbar {
+    justify-content: space-between;
+    border-radius: 0px;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2002;
+  }
+
   .nav-left {
-    /* display: none; */
+    display: flex;
   }
-
 
   .hamburger {
     display: flex;
-margin-right: 1rem;
+    margin-left: 1rem;
+    z-index: 2002;
   }
 
   .nav-links {
-    position: absolute;
-    top: 100%;
-    right: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+
+    display: flex;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(15px);
-    width: 200px;
-    padding: 2rem;
-    border-radius: 20px;
-    display: none;
+    align-items: center;
+
+    justify-content: flex-start;
+    padding-top: 7rem;
+    gap: 2rem;
+
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.4s ease;
+
+    z-index: 2001;
   }
 
   .nav-links.active {
-    display: flex;
+    transform: translateX(0);
+    opacity: 1;
   }
- .hamburger {
-    display: flex;
+
+  .nav-links a {
+    font-size: 1.5rem;
+    font-weight: 500;
   }
+
 }
